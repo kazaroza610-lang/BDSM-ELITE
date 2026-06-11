@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDSM ÉLITE - Lingerie & Accessoires BDSM Premium</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #dc143c;
+            --dark: #000;
+            --light: #fff;
+            --gray: #f3f3f3;
+            --text: #121212;
+            --border: #e0e0e0;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.5; }
+        
+        /* HEADER */
+        header { background: var(--light); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--text); text-transform: uppercase; letter-spacing: 2px; }
+        .logo span { color: var(--primary); }
+        nav { display: flex; gap: 2.5rem; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .icons { display: flex; gap: 1.5rem; font-size: 1.2rem; cursor: pointer; }
+        
+        /* SLIDESHOW */
+        .slideshow { position: relative; width: 100%; height: 500px; overflow: hidden; background: #f0f0f0; }
+        .slides-container { position: relative; width: 100%; height: 100%; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; }
+        .slide-counter { position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 14px; font-size: 0.9rem; border-radius: 4px; z-index: 10; }
+        
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* SECTION TITLE */
+        .section-title { font-size: 2rem; margin: 3rem 0 2rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        
+        /* PRODUCTS GRID */
+        .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .product-card { border: 1px solid var(--border); padding: 0; border-radius: 4px; transition: all 0.3s; }
+        .product-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-4px); }
+        .product-img { width: 100%; height: 280px; background: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; border-bottom: 1px solid var(--border); }
+        .product-info { padding: 1rem; }
+        .product-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .product-price { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
+        .badge { display: inline-block; background: var(--primary); color: white; padding: 4px 10px; font-size: 0.75rem; margin-top: 0.5rem; border-radius: 3px; font-weight: 600; }
+        
+        /* ABOUT SECTION */
+        .about { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding: 3rem 0; margin: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .about-text h2 { font-size: 1.8rem; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .about-text p { margin-bottom: 1rem; color: #666; line-height: 1.7; }
+        .about-img { width: 100%; height: 400px; background: var(--gray); border-radius: 4px; overflow: hidden; }
+        .about-img img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* NEWSLETTER */
+        .newsletter { background: var(--gray); padding: 3rem 2rem; text-align: center; margin: 3rem 0; border-radius: 4px; }
+        .newsletter h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+        .newsletter p { color: #666; margin-bottom: 1.5rem; }
+        .newsletter-form { display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem; }
+        .newsletter-form input { flex: 1; padding: 0.8rem; border: 1px solid var(--border); border-radius: 4px; font-size: 0.9rem; }
+        .newsletter-form button { background: var(--primary); color: white; border: none; padding: 0.8rem 1.5rem; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.3s; }
+        .newsletter-form button:hover { background: #b20d32; }
+        
+        /* FOOTER */
+        footer { background: var(--light); border-top: 1px solid var(--border); padding: 3rem 2rem; margin-top: 4rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { font-size: 0.95rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        .footer-section ul { list-style: none; }
+        .footer-section a { color: #666; text-decoration: none; display: block; margin-bottom: 0.6rem; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-section a:hover { color: var(--primary); }
+        .payment-methods { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); }
+        .payment-methods h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        .payment-icons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .payment-icon { width: 50px; height: 35px; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; border-radius: 3px; }
+        .footer-bottom { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid var(--border); color: #999; font-size: 0.9rem; }
+        
+        @media (max-width: 768px) {
+            nav { gap: 1rem; font-size: 0.8rem; }
+            .slideshow { height: 300px; }
+            .about { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; }
+            .products { grid-template-columns: repeat(2, 1fr); }
+            .newsletter-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">BDSM <span>ÉLITE</span></div>
+            <nav>
+                <a href="#accueil">ACCUEIL</a>
+                <a href="#bondage">BONDAGE</a>
+                <a href="#jeuxsm">JEUX SM</a>
+                <a href="#lingerie">LINGERIE</a>
+                <a href="#sextoys">SEXTOYS</a>
+            </nav>
+            <div class="icons">🔍 👤 🛍️</div>
+        </div>
+    </header>
+
+    <!-- SLIDESHOW -->
+    <div class="slideshow">
+        <div class="slides-container">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1595618423907-b0941a2f3e73?w=1400&h=600&fit=crop" alt="Bannière 1">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=1400&h=600&fit=crop" alt="Bannière 2">
+            </div>
+        </div>
+        <div class="slide-counter"><span id="current">1</span> / <span id="total">2</span></div>
+    </div>
+
+    <!-- BEST SELLERS -->
+    <div class="container">
+        <h2 class="section-title">Meilleures Ventes</h2>
+        <div class="products">
+            <div class="product-card"><div class="product-img">🔗</div><div class="product-info"><div class="product-name">Kit Bondage Premium</div><span class="badge">NOUVEAU</span><div class="product-price">59,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">⛓️</div><div class="product-info"><div class="product-name">Menottes Cuir Luxe</div><div class="product-price">44,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🎀</div><div class="product-info"><div class="product-name">Harnais Bondage</div><div class="product-price">49,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🖤</div><div class="product-info"><div class="product-name">Collier BDSM</div><div class="product-price">34,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🔞</div><div class="product-info"><div class="product-name">Fouet Premium</div><span class="badge">POPULAIRE</span><div class="product-price">79,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">💋</div><div class="product-info"><div class="product-name">Lingerie Sexy</div><div class="product-price">39,95 €</div></div></div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="container">
+        <div class="about">
+            <div class="about-text">
+                <h2>BDSM ÉLITE™</h2>
+                <p>Bienvenue chez BDSM ÉLITE, votre boutique de référence pour les accessoires BDSM premium.</p>
+                <p>Nous sommes passionnés par l'univers BDSM et nous nous engageons à vous offrir les meilleurs produits pour explorer vos désirs.</p>
+                <p>Que vous soyez dominant(e), soumis(e), switch ou simplement curieux(se), vous trouverez tout ce qu'il vous faut pour vivre pleinement vos fantasmes.</p>
+            </div>
+            <div class="about-img"><img src="https://images.unsplash.com/photo-1595618423907-b0941a2f3e73?w=600&h=400&fit=crop" alt="BDSM ÉLITE"></div>
+        </div>
+    </div>
+
+    <!-- LINGERIE -->
+    <div class="container">
+        <h2 class="section-title" id="lingerie">Lingerie Premium</h2>
+        <div class="products">
+            <div class="product-card"><div class="product-img">👗</div><div class="product-info"><div class="product-name">Body Vinyle</div><div class="product-price">39,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">👙</div><div class="product-info"><div class="product-name">Culotte Vibrante</div><div class="product-price">54,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🖤</div><div class="product-info"><div class="product-name">Harnais Sexy</div><div class="product-price">49,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">✨</div><div class="product-info"><div class="product-name">Masque SM</div><div class="product-price">29,95 €</div></div></div>
+        </div>
+    </div>
+
+    <!-- JEUX SM -->
+    <div class="container">
+        <h2 class="section-title" id="jeuxsm">Jeux SM</h2>
+        <div class="products">
+            <div class="product-card"><div class="product-img">🪢</div><div class="product-info"><div class="product-name">Cravache Cuir</div><div class="product-price">34,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🔨</div><div class="product-info"><div class="product-name">Paddle SM</div><div class="product-price">24,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">📍</div><div class="product-info"><div class="product-name">Pinces Tétons</div><div class="product-price">19,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🔒</div><div class="product-info"><div class="product-name">Cage de Chasteté</div><div class="product-price">69,95 €</div></div></div>
+        </div>
+    </div>
+
+    <!-- SEXTOYS -->
+    <div class="container">
+        <h2 class="section-title" id="sextoys">Sextoys</h2>
+        <div class="products">
+            <div class="product-card"><div class="product-img">💦</div><div class="product-info"><div class="product-name">Gode Réaliste</div><div class="product-price">39,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🌶️</div><div class="product-info"><div class="product-name">Plug Anal</div><div class="product-price">29,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">⚡</div><div class="product-info"><div class="product-name">Vibromasseur</div><div class="product-price">49,95 €</div></div></div>
+            <div class="product-card"><div class="product-img">🎁</div><div class="product-info"><div class="product-name">Kit Deluxe</div><div class="product-price">99,95 €</div></div></div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="container">
+        <div class="newsletter">
+            <h3>Rejoignez L'ÉLITE</h3>
+            <p>Promotions exclusives, nouveautés et conseils BDSM directement dans votre boîte mail</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Merci de votre inscription!');">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Une Question ?</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Suivi de colis</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="mailto:contact@bdsm-elite.fr">contact@bdsm-elite.fr</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <ul>
+                    <li><a href="#">CGV / CGU</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Politique de retour</a></li>
+                    <li><a href="#">Mentions Légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rejoignez L'ÉLITE</h3>
+                <form style="display: flex; flex-direction: column; gap: 0.5rem;" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Email" style="padding: 0.6rem; border: 1px solid var(--border); border-radius: 4px;">
+                    <button style="background: var(--primary); color: white; border: none; padding: 0.6rem; cursor: pointer; border-radius: 4px; font-weight: 600;">❯</button>
+                </form>
+            </div>
+        </div>
+        <div class="payment-methods">
+            <h4>Modes de paiement</h4>
+            <div class="payment-icons">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">APPLE</div>
+                <div class="payment-icon">GOOGLE</div>
+                <div class="payment-icon">PAYPAL</div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BDSM ÉLITE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        function updateSlide() {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current').textContent = currentSlide + 1;
+        }
+        
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide();
+        }, 5000);
+        
+        updateSlide();
+    </script>
+</body>
+</html>
