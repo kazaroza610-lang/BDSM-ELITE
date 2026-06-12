@@ -1026,21 +1026,30 @@ function changeVariantImage(productId, imageUrl) {
 
 // Gestion des variantes avec bordure rouge mobile
 function selectVariantImage(productId, imageUrl, variantId) {
+    console.log('selectVariantImage appelée:', productId, imageUrl, variantId);
+
     // Changer l'image principale
     const mainImg = document.getElementById('main-image-' + productId);
     if (mainImg) {
         mainImg.src = 'http://bdsm-empire.fr/cdn/shop/products/' + imageUrl;
+        console.log('Image changée:', mainImg.src);
     }
 
-    // Retirer la bordure rouge de tous les variants
-    document.querySelectorAll('[id^="variant-' + productId + '-"]').forEach(img => {
-        img.style.border = '1px solid #ccc';
+    // Retirer la bordure rouge de TOUS les éléments img avec variant
+    const allVariants = document.querySelectorAll('img[id*="variant-"]');
+    console.log('Tous les variants trouvés:', allVariants.length);
+
+    allVariants.forEach(img => {
+        img.style.border = '1px solid #ccc !important';
     });
 
     // Ajouter la bordure rouge au variant cliqué
     const selectedVariant = document.getElementById(variantId);
+    console.log('Variant sélectionné:', variantId, selectedVariant);
+
     if (selectedVariant) {
-        selectedVariant.style.border = '3px solid #dc143c';
+        selectedVariant.style.border = '3px solid #dc143c !important';
+        console.log('Bordure appliquée à:', variantId);
     }
 }
 
