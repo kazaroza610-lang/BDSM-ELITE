@@ -756,7 +756,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Similicuir')">Ajouter au panier</button>
             </div>
         </div>
-    </div>
+    </div></div>
     </div>
 </div>
 
