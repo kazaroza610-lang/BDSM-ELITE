@@ -222,46 +222,50 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 <div id="fiche-baillon-bouche" class="page-section">
     <div class="container" style="margin-top:2rem;">
         <a href="#bondage-baillon" onclick="showPage('bondage-baillon')" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;">← Retour à Bâillons</a>
-        
-        <div style="display:grid;grid-template-columns:120px 1fr 400px;gap:2rem;margin:2rem 0;">
+
+        <h1 style="font-size:1.8rem;margin-bottom:0.5rem;">Bâillon Bouche</h1>
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;">
+            <div style="color:#dc143c;font-size:1.8rem;font-weight:bold;">€14.95</div>
+            <div style="color:#999;text-decoration:line-through;font-size:1.1rem;">€18.95</div>
+            <span style="background:#dc143c;color:white;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.85rem;font-weight:600;">-20%</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:2rem;margin:2rem 0;">
             <!-- GALERIE DE VARIANTES (gauche) -->
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <img id="variant-baillon-bouche-noir" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
-                <img id="variant-baillon-bouche-rose" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
-                <img id="variant-baillon-bouche-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-noir" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir', 'btn-baillon-bouche-noir')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rose" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose', 'btn-baillon-bouche-rose')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge', 'btn-baillon-bouche-rouge')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
             </div>
-            
-            <!-- IMAGE PRINCIPALE (centre) -->
-            <div style="text-align:center;">
-                <img id="main-image-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Bâillon Bouche" style="width:100%;height:400px;object-fit:cover;border-radius:8px;border:1px solid #ddd;">
-            </div>
-            
-            <!-- INFOS PRODUIT (droite) -->
-            <div style="padding:2rem;background:#f9f9f9;border-radius:8px;">
-                <h1 style="font-size:1.8rem;margin-bottom:1rem;">Bâillon Bouche</h1>
-                
-                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
-                    <div style="color:#dc143c;font-size:1.8rem;font-weight:bold;">€14.95</div>
-                    <div style="color:#999;text-decoration:line-through;font-size:1.1rem;">€18.95</div>
-                    <span style="background:#dc143c;color:white;padding:0.3rem 0.8rem;border-radius:20px;font-size:0.85rem;font-weight:600;">-20%</span>
+
+            <!-- COLONNE DROITE: Image + Description + Détails -->
+            <div>
+                <!-- IMAGE PRINCIPALE -->
+                <div style="text-align:center;margin-bottom:1.5rem;">
+                    <img id="main-image-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Bâillon Bouche" style="width:100%;height:400px;object-fit:cover;border-radius:8px;border:1px solid #ddd;">
                 </div>
-                
+
+                <!-- DESCRIPTION SOUS L'IMAGE -->
                 <p style="color:#666;line-height:1.8;margin-bottom:1.5rem;">Muselez votre soumis(e) en toute sécurité avec ce joli Bâillon Sex en forme de bouche entièrement ajustable. Conçu à partir de matériaux de qualité, sûr et non toxique. Parfait pour les jeux BDSM. Sangles ajustables pour plus de confort.</p>
-                
+
+                <!-- COULEUR -->
                 <label style="display:block;font-weight:600;margin-bottom:0.5rem;">Couleur:</label>
                 <div style="display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;">
                     <button id="btn-baillon-bouche-noir" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir', 'btn-baillon-bouche-noir')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Noir</button>
                     <button id="btn-baillon-bouche-rose" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose', 'btn-baillon-bouche-rose')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Rose</button>
                     <button id="btn-baillon-bouche-rouge" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge', 'btn-baillon-bouche-rouge')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
                 </div>
-                
-                <div style="padding:1rem;background:white;border-radius:8px;border:1px solid #ddd;margin-bottom:1.5rem;">
+
+                <!-- STOCK -->
+                <div style="padding:1rem;background:#f9f9f9;border-radius:8px;border:1px solid #ddd;margin-bottom:1.5rem;">
                     <p style="font-weight:600;margin-bottom:0.5rem;">📦 Stock: <span style="color:#27ae60;">34 articles</span></p>
                     <p style="font-size:0.9rem;color:#999;">✓ Livraison gratuite en France</p>
                 </div>
-                
+
+                <!-- BOUTON AJOUTER -->
                 <button class="btn-ajouter" style="width:100%;padding:1rem;font-size:1rem;margin-bottom:1rem;" onclick="ajouterAuPanier('Bâillon Bouche')">🛒 Ajouter au panier</button>
-                
+
+                <!-- AVIS -->
                 <div style="padding-top:1rem;border-top:1px solid #ddd;text-align:center;">
                     <div style="color:#ffc107;font-size:1.2rem;margin-bottom:0.5rem;">⭐⭐⭐⭐⭐</div>
                     <span style="font-weight:600;color:#333;">4.8/5</span>
