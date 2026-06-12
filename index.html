@@ -594,63 +594,59 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 </div>
 </div></footer>
 <script>
-let currentSlide=0;
-function goToSlide(n){currentSlide=n;updateSlide()}
-function updateSlide(){document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.slide')[currentSlide].classList.add('active')}
-setInterval(()=>{currentSlide=(currentSlide+1)%2;updateSlide()},5000);
-function ajouterAuPanier(nomProduit){
-  let panier = parseInt(localStorage.getItem('panier-count')) || 0;
-  panier++;
-  localStorage.setItem('panier-count', panier);
-  mettreAJourBadge();
-  alert(nomProduit + ' ajouté au panier! (Total: ' + panier + ' article' + (panier > 1 ? 's' : '') + ')');
-}
-function mettreAJourBadge(){
-  let count = parseInt(localStorage.getItem('panier-count')) || 0;
-  document.getElementById('badge-panier').textContent = count;
-}
-function openProduct(name, price, desc){
-  window.location.href = 'product.html?product=' + encodeURIComponent(name) + '&price=' + encodeURIComponent(price) + '&desc=' + encodeURIComponent(desc);
-}
-window.addEventListener('load', function(){
-  mettreAJourBadge();
-});
-</script>
-
-<script>
 function showPage(pageId) {
-    console.log('Affichage de la page:', pageId);
-    
-    // Masquer toutes les sections
-    const allSections = document.querySelectorAll('.page-section');
-    allSections.forEach(section => {
-        section.classList.remove('active');
+    // Masquer TOUTES les sections
+    document.querySelectorAll('.page-section').forEach(section => {
         section.style.display = 'none';
+        section.classList.remove('active');
     });
-
-    // Afficher la section sélectionnée
-    const pageSection = document.getElementById('page-' + pageId);
-    if (pageSection) {
-        pageSection.classList.add('active');
-        pageSection.style.display = 'block';
-        window.scrollTo(0, 0);
+    
+    // Afficher UNIQUEMENT la page demandée
+    if (pageId === 'index') {
+        const indexPage = document.getElementById('page-index');
+        if (indexPage) {
+            indexPage.style.display = 'block';
+            indexPage.classList.add('active');
+        }
     } else {
-        console.log('Page non trouvée:', 'page-' + pageId);
+        const page = document.getElementById('page-' + pageId);
+        if (page) {
+            page.style.display = 'block';
+            page.classList.add('active');
+        }
     }
+    
+    window.location.hash = pageId;
 }
 
-// Au chargement, vérifier le hash et afficher la bonne page
-document.addEventListener('DOMContentLoaded', () => {
+// Au chargement initial, afficher la page d'accueil
+window.addEventListener('load', () => {
     const hash = window.location.hash.slice(1) || 'index';
-    if (hash !== 'index') {
-        showPage(hash);
-    }
+    showPage(hash);
 });
 
-// Écouter les changements de hash
+// Quand le hash change, afficher la page correspondante
 window.addEventListener('hashchange', () => {
     const hash = window.location.hash.slice(1) || 'index';
     showPage(hash);
+});
+
+// Slideshow automatique
+let currentSlide = 0;
+function updateSlide() {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(s => s.classList.remove('active'));
+    if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+}
+
+window.addEventListener('load', () => {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }, 5000);
+    }
 });
 </script>
 
