@@ -979,6 +979,15 @@ function selectVariant(productId, variantType, variantValue) {
     }
 }
 
+
+// Changer l'image quand on clique sur une variante
+function changeVariantImage(productId, imageUrl) {
+    const img = document.getElementById('main-image-' + productId);
+    if (img) {
+        img.src = imageUrl;
+    }
+}
+
 </script>
 
 </body>
