@@ -222,9 +222,9 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <div style="display:grid;grid-template-columns:120px 1fr 400px;gap:2rem;margin:2rem 0;">
             <!-- GALERIE DE VARIANTES (gauche) -->
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <img src="http://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="changeVariantImage('baillon-bouche', this.src); this.parentElement.querySelectorAll('img').forEach(i=>i.style.border='1px solid #ccc'); this.style.border='3px solid #dc143c';" style="cursor:pointer;border:1px solid #ccc;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
-                <img src="http://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="changeVariantImage('baillon-bouche', this.src); this.parentElement.querySelectorAll('img').forEach(i=>i.style.border='1px solid #ccc'); this.style.border='3px solid #dc143c';" style="cursor:pointer;border:1px solid #ccc;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
-                <img src="http://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="changeVariantImage('baillon-bouche', this.src); this.parentElement.querySelectorAll('img').forEach(i=>i.style.border='1px solid #ccc'); this.style.border='3px solid #dc143c';" style="cursor:pointer;border:1px solid #ccc;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-noir" src="http://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="cursor:pointer;border:3px solid #dc143c;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rose" src="http://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="cursor:pointer;border:1px solid #ccc;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rouge" src="http://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="cursor:pointer;border:1px solid #ccc;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
             </div>
             
             <!-- IMAGE PRINCIPALE (centre) -->
@@ -1021,6 +1021,26 @@ function changeVariantImage(productId, imageUrl) {
     const img = document.getElementById('main-image-' + productId);
     if (img) {
         img.src = imageUrl;
+    }
+}
+
+// Gestion des variantes avec bordure rouge mobile
+function selectVariantImage(productId, imageUrl, variantId) {
+    // Changer l'image principale
+    const mainImg = document.getElementById('main-image-' + productId);
+    if (mainImg) {
+        mainImg.src = 'http://bdsm-empire.fr/cdn/shop/products/' + imageUrl;
+    }
+
+    // Retirer la bordure rouge de tous les variants
+    document.querySelectorAll('[id^="variant-' + productId + '-"]').forEach(img => {
+        img.style.border = '1px solid #ccc';
+    });
+
+    // Ajouter la bordure rouge au variant cliqué
+    const selectedVariant = document.getElementById(variantId);
+    if (selectedVariant) {
+        selectedVariant.style.border = '3px solid #dc143c';
     }
 }
 
