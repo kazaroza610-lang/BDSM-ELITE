@@ -52,13 +52,13 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 .footer-section ul{list-style:none;margin:0}
 .footer-section a{color:#666;text-decoration:none;display:block;margin-bottom:0.2rem;font-size:0.8rem;transition:color 0.3s}
 .footer-section a:hover{color:var(--primary);font-weight:600}
-.payment-methods{position:static;padding:0;border:none;z-index:50;display:flex;justify-content:flex-end;order:0;flex-shrink:1}
+.payment-methods{position:static;padding:0;border:none;z-index:50;display:flex;justify-content:flex-end;order:0;flex-shrink:0;min-width:fit-content}
 .payment-methods h4{display:none}
-.payment-icons{display:flex;justify-content:flex-end;gap:0;flex-wrap:wrap;align-items:center;flex-shrink:0}
+.payment-icons{display:flex;justify-content:flex-end;gap:0;flex-wrap:nowrap;align-items:center;flex-shrink:0}
 .payment-icon{height:18px;display:flex;align-items:center;justify-content:center;transition:all 0.3s;background:white;border:1px solid #f0f0f0;border-radius:2px;padding:0;box-shadow:none}
 .payment-icon img{height:100%;width:auto;max-width:50px;object-fit:contain}
 .payment-icon:hover{box-shadow:0 2px 8px rgba(0,0,0,0.1);transform:translateY(-2px)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;margin-top:0.75rem;border-top:1px solid var(--border);color:#999;font-size:0.8rem;order:1;gap:0.5rem;flex-wrap:wrap}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;margin-top:0.75rem;border-top:1px solid var(--border);color:#999;font-size:0.8rem;order:1;gap:0.5rem;flex-wrap:nowrap;overflow:hidden}
 @media(max-width:768px){nav{gap:1rem;font-size:0.75rem}.slideshow{height:300px}.footer-container{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.newsletter-form{flex-direction:column}.logo img{max-height:50px}.icons{gap:1rem}.badge-panier{width:20px;height:20px;font-size:0.65rem}.payment-icons{gap:1rem}.payment-icon{height:50px;padding:6px}.payment-icon img{max-width:100px}}
 
 .page-section{display:none}
