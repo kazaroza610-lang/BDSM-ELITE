@@ -10,6 +10,8 @@
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.5}
 .variant-selected{border:3px solid #dc143c !important}
 .variant-unselected{border:1px solid #ccc !important}
+.btn-variant.variant-selected{border:2px solid #dc143c !important;color:#dc143c !important;font-weight:600 !important}
+.btn-variant.variant-unselected{border:2px solid #ccc !important;color:#333 !important}
 header{background:#000;padding:1rem 2rem;position:sticky;top:0;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
 .header-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;height:60px}
@@ -248,9 +250,9 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 
                 <label style="display:block;font-weight:600;margin-bottom:0.5rem;">Couleur:</label>
                 <div style="display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;">
-                    <button onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="padding:0.5rem 1rem;border:2px solid #dc143c;background:white;border-radius:4px;cursor:pointer;font-weight:600;color:#dc143c;">Noir</button>
-                    <button onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rose</button>
-                    <button onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
+                    <button id="btn-baillon-bouche-noir" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir', 'btn-baillon-bouche-noir')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Noir</button>
+                    <button id="btn-baillon-bouche-rose" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose', 'btn-baillon-bouche-rose')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Rose</button>
+                    <button id="btn-baillon-bouche-rouge" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge', 'btn-baillon-bouche-rouge')" style="padding:0.5rem 1rem;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
                 </div>
                 
                 <div style="padding:1rem;background:white;border-radius:8px;border:1px solid #ddd;margin-bottom:1.5rem;">
@@ -974,25 +976,39 @@ function changeVariantImage(productId, imageUrl) {
 }
 
 // Gestion des variantes avec bordure rouge mobile
-function selectVariantImage(productId, imageUrl, variantId) {
+function selectVariantImage(productId, imageUrl, variantId, buttonId) {
     // Changer l'image principale
     const mainImg = document.getElementById('main-image-' + productId);
     if (mainImg) {
         mainImg.src = 'https://bdsm-empire.fr/cdn/shop/products/' + imageUrl;
     }
 
-    // Retirer la classe sélectionnée de TOUS les variants
+    // Retirer la classe sélectionnée de TOUS les variants (images)
     const allVariants = document.querySelectorAll('img[id*="variant-"]');
     allVariants.forEach(img => {
         img.classList.remove('variant-selected');
         img.classList.add('variant-unselected');
     });
 
-    // Ajouter la classe sélectionnée au variant cliqué
+    // Ajouter la classe sélectionnée au variant cliqué (image)
     const selectedVariant = document.getElementById(variantId);
     if (selectedVariant) {
         selectedVariant.classList.remove('variant-unselected');
         selectedVariant.classList.add('variant-selected');
+    }
+
+    // Gérer les boutons de couleur aussi
+    if (buttonId) {
+        const allButtons = document.querySelectorAll('button.btn-variant');
+        allButtons.forEach(btn => {
+            btn.classList.remove('variant-selected');
+            btn.classList.add('variant-unselected');
+        });
+        const selectedButton = document.getElementById(buttonId);
+        if (selectedButton) {
+            selectedButton.classList.remove('variant-unselected');
+            selectedButton.classList.add('variant-selected');
+        }
     }
 }
 
