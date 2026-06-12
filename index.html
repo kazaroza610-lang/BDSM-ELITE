@@ -907,11 +907,7 @@ function showPage(pageId) {
         section.style.display = 'none';
         section.classList.remove('active');
     });
-    
-    // Masquer les sections de la homepage
-    const homepageSections = document.getElementById('homepage-sections');
-    if (homepageSections) homepageSections.style.display = 'none';
-    
+
     // Afficher UNIQUEMENT la page demandée
     if (pageId === 'index') {
         const indexPage = document.getElementById('page-index');
@@ -919,16 +915,20 @@ function showPage(pageId) {
             indexPage.style.display = 'block';
             indexPage.classList.add('active');
         }
-        // Afficher aussi les sections de la homepage
-        if (homepageSections) homepageSections.style.display = 'block';
     } else {
-        const page = document.getElementById('page-' + pageId);
-        if (page) {
-            page.style.display = 'block';
-            page.classList.add('active');
+        // Chercher d'abord avec le préfixe "page-"
+        let element = document.getElementById('page-' + pageId);
+        // Si pas trouvé, chercher avec le préfixe "fiche-"
+        if (!element) {
+            element = document.getElementById('fiche-' + pageId);
+        }
+
+        if (element) {
+            element.style.display = 'block';
+            element.classList.add('active');
         }
     }
-    
+
     window.location.hash = pageId;
 }
 
