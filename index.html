@@ -8,6 +8,8 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#dc143c;--dark:#000;--light:#fff;--gray:#f3f3f3;--text:#121212;--border:#e0e0e0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.5}
+.variant-selected{border:3px solid #dc143c !important}
+.variant-unselected{border:1px solid #ccc !important}
 header{background:#000;padding:1rem 2rem;position:sticky;top:0;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
 .header-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;height:60px}
@@ -222,9 +224,9 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <div style="display:grid;grid-template-columns:120px 1fr 400px;gap:2rem;margin:2rem 0;">
             <!-- GALERIE DE VARIANTES (gauche) -->
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <img id="variant-baillon-bouche-noir" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;border:3px solid #dc143c;">
-                <img id="variant-baillon-bouche-rose" src="https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;border:1px solid #ccc;">
-                <img id="variant-baillon-bouche-rouge" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;border:1px solid #ccc;">
+                <img id="variant-baillon-bouche-noir" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Noir" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rose" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999" alt="Rose" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
+                <img id="variant-baillon-bouche-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999" alt="Rouge" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="cursor:pointer;border-radius:4px;width:100%;height:100px;object-fit:cover;transition:all 0.2s;">
             </div>
             
             <!-- IMAGE PRINCIPALE (centre) -->
@@ -1032,16 +1034,18 @@ function selectVariantImage(productId, imageUrl, variantId) {
         mainImg.src = 'https://bdsm-empire.fr/cdn/shop/products/' + imageUrl;
     }
 
-    // Retirer la bordure rouge de TOUS les éléments img avec variant
+    // Retirer la classe sélectionnée de TOUS les variants
     const allVariants = document.querySelectorAll('img[id*="variant-"]');
     allVariants.forEach(img => {
-        img.style.setProperty('border', '1px solid #ccc', 'important');
+        img.classList.remove('variant-selected');
+        img.classList.add('variant-unselected');
     });
 
-    // Ajouter la bordure rouge au variant cliqué
+    // Ajouter la classe sélectionnée au variant cliqué
     const selectedVariant = document.getElementById(variantId);
     if (selectedVariant) {
-        selectedVariant.style.setProperty('border', '3px solid #dc143c', 'important');
+        selectedVariant.classList.remove('variant-unselected');
+        selectedVariant.classList.add('variant-selected');
     }
 }
 
