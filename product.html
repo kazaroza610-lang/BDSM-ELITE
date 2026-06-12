@@ -86,9 +86,9 @@ h1{font-size:1.5rem}
 <body>
 <header>
 <div class="header-container">
-<div class="logo" style="display:flex;align-items:center;gap:1rem">
-<button class="menu-toggle" onclick="toggleMenu()" style="background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;display:none">☰</button>
-<h2 style="color:white;margin:0">BDSM ÉLITE</h2>
+<div class="logo" style="display:flex;align-items:center;gap:1rem;flex:1;justify-content:center">
+<button class="menu-toggle" onclick="toggleMenu()" style="background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;display:none;position:absolute;left:2rem">☰</button>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMhnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5zAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVlJDAAABZAAAAChnVVRSQwAABZAAAACobWx1YwAAAAAAAAAAEAAAAMgnZW5z" alt="BDSM ÉLITE" style="max-height:60px;width:auto">
 </div>
 <nav id="nav-menu" style="display:flex">
 <div style="width:100%;margin-bottom:1.5rem">
@@ -124,9 +124,9 @@ h1{font-size:1.5rem}
 </div>
 </div>
 </header>
-
+ 
 <div id="menu-overlay"></div>
-
+ 
 <style>
 @media(max-width:768px){
   .menu-toggle{ display:block !important; }
@@ -171,7 +171,7 @@ h1{font-size:1.5rem}
   .menu-overlay.active{ display:block; }
 }
 </style>
-
+ 
 <script>
 function toggleMenu(){
   const menu = document.getElementById('nav-menu');
@@ -180,7 +180,7 @@ function toggleMenu(){
   menu.classList.toggle('active');
   overlay.classList.toggle('active');
 }
-
+ 
 // Attendre que le DOM soit chargé
 document.addEventListener('DOMContentLoaded', function() {
   // Fermer le menu au clic sur un lien
@@ -190,16 +190,16 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('menu-overlay').classList.remove('active');
     });
   });
-
+ 
   // Fermer le menu au clic sur l'overlay
   document.getElementById('menu-overlay').addEventListener('click', toggleMenu);
 });
 </script>
-
+ 
 <div class="breadcrumb">
 <a href="index.html">Accueil</a> / <span id="breadcrumb-cat">Meilleures Ventes</span> / <span id="product-name-breadcrumb">Produit</span>
 </div>
-
+ 
 <div class="product-container">
 <div class="product-grid">
 <!-- Galerie d'images -->
@@ -222,11 +222,11 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 </div>
 </div>
-
+ 
 <!-- Informations produit -->
 <div class="product-info">
 <h1 id="product-title">Produit</h1>
-
+ 
 <div class="product-meta">
 <div class="rating">
 <span class="stars">★★★★★</span>
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 <span>En stock - Expédition 24/48h</span>
 </div>
-
+ 
 <div class="price-section">
 <div>
 <span class="original-price" id="original-price" style="display:none;">€65,00</span>
@@ -242,11 +242,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class="discount" id="discount" style="display:none;">-23%</span>
 </div>
 </div>
-
+ 
 <p class="description" id="product-description">
 Description du produit
 </p>
-
+ 
 <div class="product-details">
 <div class="detail-title">Contenu du kit :</div>
 <div class="detail-content" id="product-contents">
@@ -256,7 +256,7 @@ Description du produit
 <li>Élément 3</li>
 </ul>
 </div>
-
+ 
 <div class="detail-title">Caractéristiques :</div>
 <div class="detail-content" id="product-specs">
 <ul>
@@ -266,7 +266,7 @@ Description du produit
 </ul>
 </div>
 </div>
-
+ 
 <!-- Options -->
 <div class="options">
 <div class="option-group">
@@ -290,7 +290,7 @@ Description du produit
 </div>
 </div>
 </div>
-
+ 
 <div class="option-group">
 <div class="option-label">Quantité</div>
 <div class="quantity-selector">
@@ -300,11 +300,11 @@ Description du produit
 </div>
 </div>
 </div>
-
+ 
 <!-- Boutons d'action -->
 <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
 <button class="buy-now" onclick="buyNow()">Acheter maintenant</button>
-
+ 
 <!-- Badges informatifs -->
 <div class="info-badges">
 <div class="badge">
@@ -322,23 +322,23 @@ Description du produit
 </div>
 </div>
 </div>
-
+ 
 <!-- Section Avis -->
 <div class="reviews-section">
 <div class="reviews-header">
 <h2 class="reviews-title">Avis Clients</h2>
 <button onclick="toggleReviewForm()" style="background:var(--primary);color:white;border:none;padding:0.6rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600">Laisser un avis</button>
 </div>
-
+ 
 <!-- Formulaire d'avis -->
 <div id="review-form" style="display:none;margin-bottom:2rem;border:2px solid var(--primary);padding:2rem;border-radius:8px;background:#f9f9f9">
 <h3 style="margin-bottom:1.5rem;font-size:1.2rem">Partagez votre avis</h3>
-
+ 
 <div style="margin-bottom:1.5rem">
 <label style="display:block;font-weight:600;margin-bottom:0.8rem">Votre nom *</label>
 <input type="text" id="review-name" placeholder="Entrez votre nom" style="width:100%;padding:0.8rem;border:1px solid var(--border);border-radius:6px;font-size:1rem">
 </div>
-
+ 
 <div style="margin-bottom:1.5rem">
 <label style="display:block;font-weight:600;margin-bottom:0.8rem">Note *</label>
 <div style="display:flex;gap:0.5rem;font-size:2rem">
@@ -350,18 +350,18 @@ Description du produit
 </div>
 <span id="rating-display" style="display:block;margin-top:0.5rem;color:#666">Sélectionnez une note</span>
 </div>
-
+ 
 <div style="margin-bottom:1.5rem">
 <label style="display:block;font-weight:600;margin-bottom:0.8rem">Votre avis *</label>
 <textarea id="review-text" placeholder="Partagez votre expérience..." style="width:100%;padding:0.8rem;border:1px solid var(--border);border-radius:6px;font-size:1rem;font-family:inherit;min-height:120px;resize:vertical"></textarea>
 </div>
-
+ 
 <div style="display:flex;gap:1rem">
 <button onclick="submitReview()" style="background:var(--primary);color:white;border:none;padding:0.8rem 2rem;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem">Soumettre l'avis</button>
 <button onclick="toggleReviewForm()" style="background:white;color:#666;border:1px solid var(--border);padding:0.8rem 2rem;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem">Annuler</button>
 </div>
 </div>
-
+ 
 <div id="reviews-list">
 <div class="review-card">
 <div class="review-header">
@@ -373,7 +373,7 @@ Description du produit
 </div>
 <div class="review-text">Produit de très bonne qualité, conforme à la description. Livraison rapide et emballage discret. Je recommande !</div>
 </div>
-
+ 
 <div class="review-card">
 <div class="review-header">
 <div>
@@ -384,7 +384,7 @@ Description du produit
 </div>
 <div class="review-text">Bon rapport qualité-prix. Les matériaux sont solides. Un peu juste sur les dimensions mais acceptable.</div>
 </div>
-
+ 
 <div class="review-card">
 <div class="review-header">
 <div>
@@ -395,7 +395,7 @@ Description du produit
 </div>
 <div class="review-text">Parfait ! Exactement ce que j'attendais. Le service client est aussi très réactif.</div>
 </div>
-
+ 
 <div class="review-card">
 <div class="review-header">
 <div>
@@ -408,12 +408,12 @@ Description du produit
 </div>
 </div>
 </div>
-
+ 
 <!-- Produits connexes -->
 <div class="related-section">
 <h2 class="related-title">Vous aimerez aussi</h2>
 <div class="related-grid" id="related-products">
-<div class="related-card">
+<div class="related-card" style="cursor:pointer" onclick="openProduct('Menottes Cuir Luxe', '44.95', 'Menottes en cuir de luxe')">
 <div class="related-img">
 <img src="https://via.placeholder.com/250?text=Produit+1" alt="Produit 1">
 </div>
@@ -422,8 +422,8 @@ Description du produit
 <div class="related-price">44,95 €</div>
 </div>
 </div>
-
-<div class="related-card">
+ 
+<div class="related-card" style="cursor:pointer" onclick="openProduct('Harnais Bondage', '49.95', 'Harnais bondage de qualité')">
 <div class="related-img">
 <img src="https://via.placeholder.com/250?text=Produit+2" alt="Produit 2">
 </div>
@@ -432,8 +432,8 @@ Description du produit
 <div class="related-price">49,95 €</div>
 </div>
 </div>
-
-<div class="related-card">
+ 
+<div class="related-card" style="cursor:pointer" onclick="openProduct('Fouet Premium', '79.95', 'Fouet premium cuir véritable')">
 <div class="related-img">
 <img src="https://via.placeholder.com/250?text=Produit+3" alt="Produit 3">
 </div>
@@ -442,8 +442,8 @@ Description du produit
 <div class="related-price">79,95 €</div>
 </div>
 </div>
-
-<div class="related-card">
+ 
+<div class="related-card" style="cursor:pointer" onclick="openProduct('Collier BDSM', '34.95', 'Collier BDSM avec fermoir')">
 <div class="related-img">
 <img src="https://via.placeholder.com/250?text=Produit+4" alt="Produit 4">
 </div>
@@ -455,20 +455,20 @@ Description du produit
 </div>
 </div>
 </div>
-
+ 
 <script>
 // Récupérer les données du produit depuis les paramètres d'URL
 const params = new URLSearchParams(window.location.search);
 const productName = params.get('product') || 'Produit';
 const productPrice = params.get('price') || '49,90';
 const productDesc = params.get('desc') || 'Description du produit';
-
+ 
 // Mettre à jour les informations du produit
 document.getElementById('product-title').textContent = productName;
 document.getElementById('product-name-breadcrumb').textContent = productName;
 document.getElementById('product-price').textContent = '€' + productPrice;
 document.getElementById('product-description').textContent = productDesc;
-
+ 
 // Gestion de la galerie
 function changeImage(index) {
   const thumbnails = document.querySelectorAll('.thumbnail');
@@ -478,24 +478,24 @@ function changeImage(index) {
   });
   document.getElementById('main-image').src = `https://via.placeholder.com/500x500?text=Vue+${index + 1}`;
 }
-
+ 
 // Gestion des couleurs
 function selectColor(element) {
   document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('active'));
   element.classList.add('active');
 }
-
+ 
 // Gestion de la quantité
 function increaseQty() {
   const input = document.getElementById('quantity');
   input.value = parseInt(input.value) + 1;
 }
-
+ 
 function decreaseQty() {
   const input = document.getElementById('quantity');
   if (input.value > 1) input.value = parseInt(input.value) - 1;
 }
-
+ 
 // Ajouter au panier
 function addToCart() {
   const qty = document.getElementById('quantity').value;
@@ -508,15 +508,15 @@ function addToCart() {
   // Retourner à l'accueil
   setTimeout(() => window.location.href = 'index.html', 500);
 }
-
+ 
 // Acheter maintenant
 function buyNow() {
   addToCart();
 }
-
+ 
 // Gestion des avis
 let currentRating = 0;
-
+ 
 function toggleReviewForm() {
   const form = document.getElementById('review-form');
   form.style.display = form.style.display === 'none' ? 'block' : 'none';
@@ -524,14 +524,14 @@ function toggleReviewForm() {
     form.scrollIntoView({ behavior: 'smooth' });
   }
 }
-
+ 
 function setRating(stars) {
   currentRating = stars;
   const display = document.getElementById('rating-display');
   display.textContent = '★'.repeat(stars) + '☆'.repeat(5 - stars);
   display.style.color = 'var(--primary)';
 }
-
+ 
 function submitReview() {
   const name = document.getElementById('review-name').value.trim();
   const text = document.getElementById('review-text').value.trim();
@@ -570,7 +570,7 @@ function submitReview() {
   loadReviews();
   toggleReviewForm();
 }
-
+ 
 function loadReviews() {
   let reviews = JSON.parse(localStorage.getItem('reviews-' + productName) || '[]');
   const reviewsList = document.getElementById('reviews-list');
@@ -599,7 +599,11 @@ function loadReviews() {
     </div>
   `).join('');
 }
-
+ 
+function openProduct(name, price, desc){
+  window.location.href = 'product.html?product=' + encodeURIComponent(name) + '&price=' + encodeURIComponent(price) + '&desc=' + encodeURIComponent(desc);
+}
+ 
 window.addEventListener('load', function(){
   loadReviews();
   // Charger le nombre du panier
