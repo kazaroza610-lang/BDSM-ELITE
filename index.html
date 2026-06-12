@@ -224,11 +224,11 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 
                 <!-- Couleur -->
                 <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Couleur</label>
-                <select style="width:100%;padding:0.9rem;border:1px solid #ddd;border-radius:4px;margin-bottom:2rem;font-size:1rem;background:white;">
-                    <option>Noir</option>
-                    <option>Rose</option>
-                    <option>Rouge</option>
-                </select>
+                <div style="display:flex;gap:0.6rem;margin-bottom:2rem;flex-wrap:wrap;">
+                    <button id="btn-baillon-bouche-noir" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir', 'btn-baillon-bouche-noir')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Noir</button>
+                    <button id="btn-baillon-bouche-rose" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose', 'btn-baillon-bouche-rose')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rose</button>
+                    <button id="btn-baillon-bouche-rouge" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge', 'btn-baillon-bouche-rouge')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rouge</button>
+                </div>
 
                 <!-- Quantité -->
                 <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
