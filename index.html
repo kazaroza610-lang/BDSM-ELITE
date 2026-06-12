@@ -248,9 +248,9 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 
                 <label style="display:block;font-weight:600;margin-bottom:0.5rem;">Couleur:</label>
                 <div style="display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;">
-                    <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #dc143c;background:white;border-radius:4px;cursor:pointer;font-weight:600;color:#dc143c;">Noir</button>
-                    <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rose</button>
-                    <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
+                    <button onclick="selectVariantImage('baillon-bouche', 'product-image-1294728802.jpg?v=1591125999', 'variant-baillon-bouche-noir')" style="padding:0.5rem 1rem;border:2px solid #dc143c;background:white;border-radius:4px;cursor:pointer;font-weight:600;color:#dc143c;">Noir</button>
+                    <button onclick="selectVariantImage('baillon-bouche', 'baillon-sex___3.jpg?v=1591125999', 'variant-baillon-bouche-rose')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rose</button>
+                    <button onclick="selectVariantImage('baillon-bouche', 'product-image-1294728804.jpg?v=1591125999', 'variant-baillon-bouche-rouge')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
                 </div>
                 
                 <div style="padding:1rem;background:white;border-radius:8px;border:1px solid #ddd;margin-bottom:1.5rem;">
@@ -264,59 +264,6 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                     <div style="color:#ffc107;font-size:1.2rem;margin-bottom:0.5rem;">⭐⭐⭐⭐⭐</div>
                     <span style="font-weight:600;color:#333;">4.8/5</span>
                     <span style="color:#999;"> (156 avis)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-            
-            <!-- INFOS PRODUIT -->
-            <div>
-                <h1 style="font-size:2rem;margin-bottom:0.5rem;">Bâillon Bouche</h1>
-                <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
-                    <div style="color:#dc143c;font-size:1.5rem;font-weight:bold;">€14.95</div>
-                    <div style="color:#999;text-decoration:line-through;">€18.95</div>
-                    <span style="background:#dc143c;color:white;padding:0.25rem 0.75rem;border-radius:20px;font-size:0.8rem;">-20%</span>
-                </div>
-                
-                <div style="margin:1.5rem 0;padding:1rem;background:#f0f0f0;border-radius:8px;">
-                    <p style="color:#666;line-height:1.6;">Muselez votre soumis(e) en toute sécurité avec ce joli Bâillon Sex en forme de bouche entièrement ajustable. Conçu à partir de matériaux de qualité, sûr et non toxique. Parfait pour les jeux BDSM. Sangles ajustables pour plus de confort.</p>
-                </div>
-                
-                <!-- VARIANTES -->
-                <div style="margin:1.5rem 0;">
-                    <label style="display:block;font-weight:600;margin-bottom:0.5rem;">Couleur:</label>
-                    <div style="display:flex;gap:0.3rem;margin-bottom:1rem;">
-                        <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #dc143c;background:white;border-radius:4px;cursor:pointer;font-weight:600;color:#dc143c;">Noir</button>
-                        <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/baillon-sex___3.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rose</button>
-                        <button onclick="changeVariantImage('baillon-bouche', 'https://bdsm-empire.fr/cdn/shop/products/product-image-1294728804.jpg?v=1591125999')" style="padding:0.5rem 1rem;border:2px solid #ccc;background:white;border-radius:4px;cursor:pointer;">Rouge</button>
-                    </div>
-                    
-                    <label style="display:block;font-weight:600;margin-bottom:0.5rem;">Taille:</label>
-                    <select style="width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:4px;margin-bottom:1rem;">
-                        <option>Petite</option>
-                        <option selected>Standard</option>
-                        <option>Grande</option>
-                    </select>
-                </div>
-                
-                <!-- STOCK -->
-                <div style="margin:1.5rem 0;padding:1rem;background:#f9f9f9;border-radius:8px;">
-                    <p style="font-weight:600;">📦 Stock disponible: <span style="color:#27ae60;">34 articles</span></p>
-                    <p style="font-size:0.9rem;color:#999;">Livraison gratuite en France</p>
-                </div>
-                
-                <!-- BOUTON -->
-                <button class="btn-ajouter" style="width:100%;padding:1rem;font-size:1rem;margin-top:1rem;" onclick="ajouterAuPanier('Bâillon Bouche')">🛒 Ajouter au panier</button>
-                
-                <!-- AVIS -->
-                <div style="margin-top:2rem;padding-top:1rem;border-top:1px solid #ddd;">
-                    <div style="display:flex;align-items:center;gap:0.3rem;margin-bottom:0.5rem;">
-                        <span style="color:#ffc107;">⭐⭐⭐⭐⭐</span>
-                        <span style="font-weight:600;">4.8/5</span>
-                        <span style="color:#999;">(156 avis)</span>
-                    </div>
                 </div>
             </div>
         </div>
