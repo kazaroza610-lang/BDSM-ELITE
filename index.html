@@ -937,7 +937,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <a href="#bondage-collier" onclick="showPage('bondage-collier'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour</a>
         <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
             <div style="text-align:center;">
-                <img src="https://via.placeholder.com/400" alt="COLLIER LAISSE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+                <img src="https://bdsm-empire.fr/cdn/shop/products/collier-laisse-homme__102_1200x1200.jpg?v=1624186628" alt="COLLIER LAISSE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
             </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">COLLIER LAISSE</h1>
@@ -1778,7 +1778,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <a href="#bondage-menottes" onclick="showPage('bondage-menottes'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour</a>
         <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
             <div style="text-align:center;">
-                <img src="https://via.placeholder.com/400" alt="MENOTTES ACIER" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+                <img src="https://bdsm-empire.fr/cdn/shop/products/menottes-argente-bdsm_1200x1200.jpg" alt="MENOTTES ACIER" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
             </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">MENOTTES ACIER</h1>
@@ -2641,6 +2641,10 @@ function showPage(pageId) {
     }
 
     window.location.hash = pageId;
+}
+
+function ajouterAuPanier(productName) {
+    alert(`✓ "${productName}" a été ajouté au panier!`);
 }
 
 // Au chargement initial, afficher la page d'accueil
