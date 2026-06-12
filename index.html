@@ -153,11 +153,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
     <div class="container" style="margin-top:2rem;">
         <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
 
-        <div style="display:grid;grid-template-columns:100px 1fr 380px;gap:2.5rem;margin:2rem 0;">
-            <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <img id="variant-baillon-bdsm-blanc" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" alt="Blanc" onclick="selectVariantImage('baillon-bdsm', 'bdsm-baillon__1.jpg?v=1591125988', 'variant-baillon-bdsm-blanc', 'btn-baillon-bdsm-blanc')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
-            </div>
-
+        <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
             <div style="text-align:center;">
                 <img id="main-image-baillon-bdsm" src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" alt="BÂILLON BDSMOS" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
             </div>
@@ -167,22 +163,12 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€19.95</div>
 
-                <div style="margin-bottom:2rem;"></div>
-
-                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
-                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2rem;" id="quantity-baillon-bdsm">
-                    <button onclick="decreaseQuantity('quantity-baillon-bdsm')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">−</button>
-                    <input type="number" value="1" style="width:70px;text-align:center;border:1px solid #ddd;padding:0.7rem;font-size:1rem;font-weight:bold;">
-                    <button onclick="increaseQuantity('quantity-baillon-bdsm')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">+</button>
-                </div>
-
                 <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON BDSMOS')">Ajouter au panier</button>
 
                 <div style="font-size:0.95rem;line-height:2;color:#333;">
                     <div>🔒 <strong>Paiement Sécurisé</strong></div>
                     <div>✓ <strong>En stock, expédié sous 24/48h</strong></div>
                     <div>📦 <strong>Livraison Suivie OFFERTE</strong></div>
-                    <div><strong>Plus que 28 en stock</strong></div>
                 </div>
             </div>
         </div>
@@ -631,6 +617,328 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
     </div>
 </div>
 
+<div id="fiche-baillon-masque" class="page-section">
+    <div class="container" style="margin-top:2rem;">
+        <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
+        <div style="display:grid;grid-template-columns:100px 1fr 380px;gap:2.5rem;margin:2rem 0;">
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <img id="variant-baillon-masque-noir" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="Noir" onclick="selectVariantImage('baillon-masque', 'product-image-1534280473.jpg?v=1600964809', 'variant-baillon-masque-noir', 'btn-baillon-masque-noir')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+                <img id="variant-baillon-masque-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280464.jpg?v=1624186617" alt="Rouge" onclick="selectVariantImage('baillon-masque', 'product-image-1534280464.jpg?v=1624186617', 'variant-baillon-masque-rouge', 'btn-baillon-masque-rouge')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+            </div>
+            <div style="text-align:center;">
+                <img id="main-image-baillon-masque" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="BÂILLON MASQUE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+            </div>
+            <div>
+                <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON MASQUE</h1>
+                <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€34.95</div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Couleur</label>
+                <div style="display:flex;gap:0.6rem;margin-bottom:2rem;flex-wrap:wrap;">
+                    <button id="btn-baillon-masque-noir" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-masque', 'product-image-1534280473.jpg?v=1600964809', 'variant-baillon-masque-noir', 'btn-baillon-masque-noir')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Noir</button>
+                    <button id="btn-baillon-masque-rouge" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-masque', 'product-image-1534280464.jpg?v=1624186617', 'variant-baillon-masque-rouge', 'btn-baillon-masque-rouge')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rouge</button>
+                </div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2rem;" id="quantity-baillon-masque">
+                    <button onclick="decreaseQuantity('quantity-baillon-masque')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">−</button>
+                    <input type="number" value="1" style="width:70px;text-align:center;border:1px solid #ddd;padding:0.7rem;font-size:1rem;font-weight:bold;">
+                    <button onclick="increaseQuantity('quantity-baillon-masque')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">+</button>
+                </div>
+                <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON MASQUE')">Ajouter au panier</button>
+                <div style="font-size:0.95rem;line-height:2;color:#333;">
+                    <div>🔒 <strong>Paiement Sécurisé</strong></div>
+                    <div>✓ <strong>En stock, expédié sous 24/48h</strong></div>
+                    <div>📦 <strong>Livraison Suivie OFFERTE</strong></div>
+                    <div><strong>Plus que 32 en stock</strong></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0.3rem 0 2rem;padding:2.5rem;background:#f9f9f9;border-radius:8px;border-left:4px solid #dc143c;max-width:700px;">
+            <p style="font-size:1.05rem;line-height:1.8;color:#333;font-weight:500;">Bâillon masque pour une expérience BDSM intensifiée. Design distinctif et confortable, idéal pour le domination et le contrôle sensuel.</p>
+        </div>
+        <div style="margin:2rem 0;padding:2.5rem;background:#f9f9f9;border-radius:8px;min-height:150px;">
+            <h2 style="font-size:1.3rem;margin-bottom:1.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;">Avis clients</h2>
+            <p style="color:#999;font-size:1rem;">Les avis seront affichés ici...</p>
+        </div>
+
+        <div style="margin:3rem 0;">
+            <h2 style="font-size:1.3rem;margin-bottom:2.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;text-align:center;">LES CLIENTS AYANT CONSULTÉ CE PRODUIT ONT ÉGALEMENT REGARDÉ</h2>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;">
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-harnais'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Harnais</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€24.95</div>
+                    <a href="#baillon-harnais" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-harnais'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431309.jpg?v=1600965430" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-similicuir'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Similicuir</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-similicuir" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-similicuir'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-bdsm'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon BdsmOs</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-bdsm" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-bdsm'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/harnais-baillon___18.jpg?v=1624186599" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('harnais-baillon-bouche'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon HarnaisBouche</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#harnais-baillon-bouche" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('harnais-baillon-bouche'); return false;">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fiche-baillon-coeur" class="page-section">
+    <div class="container" style="margin-top:2rem;">
+        <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
+        <div style="display:grid;grid-template-columns:100px 1fr 380px;gap:2.5rem;margin:2rem 0;">
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <img id="variant-baillon-coeur-rouge" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/baillon-coeur__7.jpg?v=1624186635" alt="Rouge" onclick="selectVariantImage('baillon-coeur', 'baillon-coeur__7.jpg?v=1624186635', 'variant-baillon-coeur-rouge', 'btn-baillon-coeur-rouge')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+                <img id="variant-baillon-coeur-violet" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1326629125.jpg?v=1591126016" alt="Violet" onclick="selectVariantImage('baillon-coeur', 'product-image-1326629125.jpg?v=1591126016', 'variant-baillon-coeur-violet', 'btn-baillon-coeur-violet')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+            </div>
+            <div style="text-align:center;">
+                <img id="main-image-baillon-coeur" src="https://bdsm-empire.fr/cdn/shop/products/baillon-coeur__7.jpg?v=1624186635" alt="BÂILLON COEUR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+            </div>
+            <div>
+                <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON COEUR</h1>
+                <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€21.95</div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Couleur</label>
+                <div style="display:flex;gap:0.6rem;margin-bottom:2rem;flex-wrap:wrap;">
+                    <button id="btn-baillon-coeur-rouge" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-coeur', 'baillon-coeur__7.jpg?v=1624186635', 'variant-baillon-coeur-rouge', 'btn-baillon-coeur-rouge')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rouge</button>
+                    <button id="btn-baillon-coeur-violet" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-coeur', 'product-image-1326629125.jpg?v=1591126016', 'variant-baillon-coeur-violet', 'btn-baillon-coeur-violet')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Violet</button>
+                </div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2rem;" id="quantity-baillon-coeur">
+                    <button onclick="decreaseQuantity('quantity-baillon-coeur')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">−</button>
+                    <input type="number" value="1" style="width:70px;text-align:center;border:1px solid #ddd;padding:0.7rem;font-size:1rem;font-weight:bold;">
+                    <button onclick="increaseQuantity('quantity-baillon-coeur')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">+</button>
+                </div>
+                <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON COEUR')">Ajouter au panier</button>
+                <div style="font-size:0.95rem;line-height:2;color:#333;">
+                    <div>🔒 <strong>Paiement Sécurisé</strong></div>
+                    <div>✓ <strong>En stock, expédié sous 24/48h</strong></div>
+                    <div>📦 <strong>Livraison Suivie OFFERTE</strong></div>
+                    <div><strong>Plus que 92 en stock</strong></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0.3rem 0 2rem;padding:2.5rem;background:#f9f9f9;border-radius:8px;border-left:4px solid #dc143c;max-width:700px;">
+            <p style="font-size:1.05rem;line-height:1.8;color:#333;font-weight:500;">Bâillon cœur pour une dominance douce et stylisée. Design unique en forme de cœur, parfait pour les amateurs de tendresse BDSM sensuelle.</p>
+        </div>
+        <div style="margin:2rem 0;padding:2.5rem;background:#f9f9f9;border-radius:8px;min-height:150px;">
+            <h2 style="font-size:1.3rem;margin-bottom:1.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;">Avis clients</h2>
+            <p style="color:#999;font-size:1rem;">Les avis seront affichés ici...</p>
+        </div>
+
+        <div style="margin:3rem 0;">
+            <h2 style="font-size:1.3rem;margin-bottom:2.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;text-align:center;">LES CLIENTS AYANT CONSULTÉ CE PRODUIT ONT ÉGALEMENT REGARDÉ</h2>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;">
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('fiche-baillon-masque'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Masque</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€34.95</div>
+                    <a href="#fiche-baillon-masque" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('fiche-baillon-masque'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-harnais'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Harnais</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€24.95</div>
+                    <a href="#baillon-harnais" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-harnais'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431309.jpg?v=1600965430" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-similicuir'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Similicuir</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-similicuir" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-similicuir'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-bdsm'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon BdsmOs</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-bdsm" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-bdsm'); return false;">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fiche-baillon-cuir" class="page-section">
+    <div class="container" style="margin-top:2rem;">
+        <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
+        <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
+            <div style="text-align:center;">
+                <img id="main-image-baillon-cuir" src="https://bdsm-empire.fr/cdn/shop/products/HTB1Scl.QFXXXXa0XVXXq6xXFXXXh.jpg?v=1624186639" alt="BÂILLON CUIR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+            </div>
+            <div>
+                <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON CUIR</h1>
+                <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€39.95</div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2rem;" id="quantity-baillon-cuir">
+                    <button onclick="decreaseQuantity('quantity-baillon-cuir')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">−</button>
+                    <input type="number" value="1" style="width:70px;text-align:center;border:1px solid #ddd;padding:0.7rem;font-size:1rem;font-weight:bold;">
+                    <button onclick="increaseQuantity('quantity-baillon-cuir')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">+</button>
+                </div>
+                <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON CUIR')">Ajouter au panier</button>
+                <div style="font-size:0.95rem;line-height:2;color:#333;">
+                    <div>🔒 <strong>Paiement Sécurisé</strong></div>
+                    <div>✓ <strong>En stock, expédié sous 24/48h</strong></div>
+                    <div>📦 <strong>Livraison Suivie OFFERTE</strong></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0.3rem 0 2rem;padding:2.5rem;background:#f9f9f9;border-radius:8px;border-left:4px solid #dc143c;max-width:700px;">
+            <p style="font-size:1.05rem;line-height:1.8;color:#333;font-weight:500;">Bâillon en cuir premium pour une domination authentique et confortable. Matériau durable et luxueux, idéal pour les sessions intensives.</p>
+        </div>
+        <div style="margin:2rem 0;padding:2.5rem;background:#f9f9f9;border-radius:8px;min-height:150px;">
+            <h2 style="font-size:1.3rem;margin-bottom:1.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;">Avis clients</h2>
+            <p style="color:#999;font-size:1rem;">Les avis seront affichés ici...</p>
+        </div>
+
+        <div style="margin:3rem 0;">
+            <h2 style="font-size:1.3rem;margin-bottom:2.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;text-align:center;">LES CLIENTS AYANT CONSULTÉ CE PRODUIT ONT ÉGALEMENT REGARDÉ</h2>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;">
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('fiche-baillon-masque'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Masque</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€34.95</div>
+                    <a href="#fiche-baillon-masque" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('fiche-baillon-masque'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-harnais'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Harnais</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€24.95</div>
+                    <a href="#baillon-harnais" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-harnais'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431309.jpg?v=1600965430" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-similicuir'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Similicuir</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-similicuir" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-similicuir'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-bdsm'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon BdsmOs</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-bdsm" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-bdsm'); return false;">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fiche-baillon-soumise" class="page-section">
+    <div class="container" style="margin-top:2rem;">
+        <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
+        <div style="display:grid;grid-template-columns:100px 1fr 380px;gap:2.5rem;margin:2rem 0;">
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+                <img id="variant-baillon-soumise-noir" class="variant-selected" src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="Noir" onclick="selectVariantImage('baillon-soumise', '14_200572148_Black.jpg?v=1591126024', 'variant-baillon-soumise-noir', 'btn-baillon-soumise-noir')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+                <img id="variant-baillon-soumise-rose" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/14_200572149_Pink.jpg?v=1591126024" alt="Rose" onclick="selectVariantImage('baillon-soumise', '14_200572149_Pink.jpg?v=1591126024', 'variant-baillon-soumise-rose', 'btn-baillon-soumise-rose')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+                <img id="variant-baillon-soumise-violet" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/14_200572150_Purple.jpg?v=1591126024" alt="Violet" onclick="selectVariantImage('baillon-soumise', '14_200572150_Purple.jpg?v=1591126024', 'variant-baillon-soumise-violet', 'btn-baillon-soumise-violet')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+                <img id="variant-baillon-soumise-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/14_200572151_Tang.jpg?v=1591126024" alt="Rouge" onclick="selectVariantImage('baillon-soumise', '14_200572151_Tang.jpg?v=1591126024', 'variant-baillon-soumise-rouge', 'btn-baillon-soumise-rouge')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
+            </div>
+            <div style="text-align:center;">
+                <img id="main-image-baillon-soumise" src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="BÂILLON SOUMISE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+            </div>
+            <div>
+                <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON SOUMISE</h1>
+                <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€24.95</div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Couleur</label>
+                <div style="display:flex;gap:0.6rem;margin-bottom:2rem;flex-wrap:wrap;">
+                    <button id="btn-baillon-soumise-noir" class="btn-variant variant-selected" onclick="selectVariantImage('baillon-soumise', '14_200572148_Black.jpg?v=1591126024', 'variant-baillon-soumise-noir', 'btn-baillon-soumise-noir')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Noir</button>
+                    <button id="btn-baillon-soumise-rose" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-soumise', '14_200572149_Pink.jpg?v=1591126024', 'variant-baillon-soumise-rose', 'btn-baillon-soumise-rose')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rose</button>
+                    <button id="btn-baillon-soumise-violet" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-soumise', '14_200572150_Purple.jpg?v=1591126024', 'variant-baillon-soumise-violet', 'btn-baillon-soumise-violet')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Violet</button>
+                    <button id="btn-baillon-soumise-rouge" class="btn-variant variant-unselected" onclick="selectVariantImage('baillon-soumise', '14_200572151_Tang.jpg?v=1591126024', 'variant-baillon-soumise-rouge', 'btn-baillon-soumise-rouge')" style="padding:0.6rem 1.2rem;background:white;border-radius:4px;cursor:pointer;font-weight:600;font-size:0.95rem;">Rouge</button>
+                </div>
+                <label style="display:block;font-weight:bold;margin-bottom:0.8rem;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.5px;">Quantité</label>
+                <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:2rem;" id="quantity-baillon-soumise">
+                    <button onclick="decreaseQuantity('quantity-baillon-soumise')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">−</button>
+                    <input type="number" value="1" style="width:70px;text-align:center;border:1px solid #ddd;padding:0.7rem;font-size:1rem;font-weight:bold;">
+                    <button onclick="increaseQuantity('quantity-baillon-soumise')" style="width:45px;height:45px;border:1px solid #ddd;background:white;cursor:pointer;font-size:1.3rem;font-weight:bold;">+</button>
+                </div>
+                <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON SOUMISE')">Ajouter au panier</button>
+                <div style="font-size:0.95rem;line-height:2;color:#333;">
+                    <div>🔒 <strong>Paiement Sécurisé</strong></div>
+                    <div>✓ <strong>En stock, expédié sous 24/48h</strong></div>
+                    <div>📦 <strong>Livraison Suivie OFFERTE</strong></div>
+                    <div><strong>Plus que 43 en stock</strong></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0.3rem 0 2rem;padding:2.5rem;background:#f9f9f9;border-radius:8px;border-left:4px solid #dc143c;max-width:700px;">
+            <p style="font-size:1.05rem;line-height:1.8;color:#333;font-weight:500;">Bâillon soumise avec 4 variantes de couleurs pour exprimer votre soumission. Confortable et élégant, parfait pour les amateurs de domination sensuelle.</p>
+        </div>
+        <div style="margin:2rem 0;padding:2.5rem;background:#f9f9f9;border-radius:8px;min-height:150px;">
+            <h2 style="font-size:1.3rem;margin-bottom:1.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;">Avis clients</h2>
+            <p style="color:#999;font-size:1rem;">Les avis seront affichés ici...</p>
+        </div>
+
+        <div style="margin:3rem 0;">
+            <h2 style="font-size:1.3rem;margin-bottom:2.5rem;text-transform:uppercase;font-weight:bold;letter-spacing:0.5px;text-align:center;">LES CLIENTS AYANT CONSULTÉ CE PRODUIT ONT ÉGALEMENT REGARDÉ</h2>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;">
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('fiche-baillon-masque'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Masque</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€34.95</div>
+                    <a href="#fiche-baillon-masque" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('fiche-baillon-masque'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/baillon-coeur__7.jpg?v=1624186635" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('fiche-baillon-coeur'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Coeur</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€21.95</div>
+                    <a href="#fiche-baillon-coeur" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('fiche-baillon-coeur'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-harnais'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Harnais</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€24.95</div>
+                    <a href="#baillon-harnais" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-harnais'); return false;">Ajouter au panier</a>
+                </div>
+                <div>
+                    <div style="width:100%;aspect-ratio:1/1;background:#f0f0f0;border-radius:8px;margin-bottom:1.5rem;overflow:hidden;">
+                        <img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431309.jpg?v=1600965430" style="width:100%;height:100%;object-fit:cover;cursor:pointer;" onclick="showPage('baillon-similicuir'); return false;">
+                    </div>
+                    <h3 style="font-weight:bold;margin-bottom:0.8rem;font-size:1rem;">Bâillon Similicuir</h3>
+                    <div style="color:#dc143c;font-weight:bold;margin-bottom:1.2rem;font-size:1.1rem;">€19.95</div>
+                    <a href="#baillon-similicuir" style="display:inline-block;width:100%;padding:0.9rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;font-size:0.9rem;text-decoration:none;text-align:center;" onclick="showPage('baillon-similicuir'); return false;">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="page-bondage-tout" class="page-section">
     <div class="container" style="margin-top:2rem;font-size:0.9rem;color:#666;margin-bottom:1rem">
         <a href="#index" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none">Accueil</a> / Bondage
@@ -685,6 +993,45 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <div class="product-price">€19.95</div>
                 <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 87</div>
                 <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Similicuir')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-masque'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="Bâillon Masque" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Masque</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon masque pour une expérience BDSM intensifiée. Design distinctif et confortable.</div>
+                <div class="product-price">€34.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 32</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Masque')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-coeur'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/baillon-coeur__7.jpg?v=1624186635" alt="Bâillon Coeur" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Coeur</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon cœur pour une dominance douce et stylisée. Design unique en forme de cœur.</div>
+                <div class="product-price">€21.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 92</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Coeur')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-cuir'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/HTB1Scl.QFXXXXa0XVXXq6xXFXXXh.jpg?v=1624186639" alt="Bâillon Cuir" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Cuir</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon en cuir premium pour une domination authentique et confortable.</div>
+                <div class="product-price">€39.95</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Cuir')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-soumise'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="Bâillon Soumise" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Soumise</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon soumise avec 4 variantes de couleurs pour exprimer votre soumission.</div>
+                <div class="product-price">€24.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 43</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Soumise')">Ajouter au panier</button>
             </div>
         </div>
     </div>
@@ -744,6 +1091,45 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <div class="product-price">€19.95</div>
                 <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 87</div>
                 <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Similicuir')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-masque'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="Bâillon Masque" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Masque</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon masque pour une expérience BDSM intensifiée. Design distinctif et confortable.</div>
+                <div class="product-price">€34.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 32</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Masque')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-coeur'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/baillon-coeur__7.jpg?v=1624186635" alt="Bâillon Coeur" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Coeur</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon cœur pour une dominance douce et stylisée. Design unique en forme de cœur.</div>
+                <div class="product-price">€21.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 92</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Coeur')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-cuir'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/HTB1Scl.QFXXXXa0XVXXq6xXFXXXh.jpg?v=1624186639" alt="Bâillon Cuir" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Cuir</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon en cuir premium pour une domination authentique et confortable.</div>
+                <div class="product-price">€39.95</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Cuir')">Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-baillon-soumise'); return false;">
+            <div class="product-img"><img src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="Bâillon Soumise" style="width:100%;height:100%;object-fit:cover;"></div>
+            <div class="product-info">
+                <div class="product-name">Bâillon Soumise</div>
+                <div style="font-size:0.85rem;color:#666;margin:0.5rem 0;">Bâillon soumise avec 4 variantes de couleurs pour exprimer votre soumission.</div>
+                <div class="product-price">€24.95</div>
+                <div style="font-size:0.75rem;color:#999;margin:0.3rem 0;">Stock: 43</div>
+                <button class="btn-ajouter" onclick="ajouterAuPanier('Bâillon Soumise')">Ajouter au panier</button>
             </div>
         </div>
     </div>
