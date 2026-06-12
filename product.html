@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produit - BDSM ÉLITE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#dc143c;--dark:#000;--light:#fff;--gray:#f3f3f3;--text:#121212;--border:#e0e0e0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.5;background:#fff}
+header{background:#000;padding:1rem 2rem;position:sticky;top:0;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.header-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;height:60px}
+.logo img{max-height:60px;width:auto}
+nav{display:flex;gap:2.5rem}
+nav a{text-decoration:none;color:white;font-weight:600;font-size:0.85rem;text-transform:uppercase}
+.breadcrumb{max-width:1200px;margin:2rem auto;padding:0 2rem;font-size:0.9rem}
+.breadcrumb a{color:var(--primary);text-decoration:none}
+.product-container{max-width:1200px;margin:0 auto;padding:0 2rem}
+.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:4rem}
+.product-gallery{display:flex;flex-direction:column;gap:1rem}
+.main-image{width:100%;aspect-ratio:1;background:#f5f5f5;display:flex;align-items:center;justify-content:center;border-radius:8px;overflow:hidden}
+.main-image img{width:100%;height:100%;object-fit:cover}
+.thumbnail-gallery{display:flex;gap:1rem}
+.thumbnail{width:100px;height:100px;border:2px solid transparent;border-radius:6px;cursor:pointer;overflow:hidden;background:#f5f5f5}
+.thumbnail img{width:100%;height:100%;object-fit:cover}
+.thumbnail.active{border-color:var(--primary)}
+.product-info h1{font-size:2rem;margin-bottom:1rem}
+.product-meta{display:flex;gap:2rem;margin-bottom:1.5rem;color:#666;font-size:0.95rem}
+.rating{display:flex;gap:0.5rem;align-items:center}
+.stars{color:#ffc107}
+.price-section{margin-bottom:2rem}
+.price{font-size:2rem;font-weight:bold;color:var(--primary);margin-bottom:0.5rem}
+.original-price{text-decoration:line-through;color:#999;font-size:1.2rem;margin-right:1rem}
+.discount{background:var(--primary);color:white;padding:0.3rem 0.6rem;border-radius:4px;font-size:0.85rem}
+.description{color:#666;line-height:1.8;margin-bottom:2rem}
+.product-details{margin-bottom:2rem}
+.detail-title{font-weight:600;margin-bottom:1rem;text-transform:uppercase;font-size:0.9rem}
+.detail-content{color:#666;margin-bottom:2rem}
+.detail-content ul{margin-left:2rem;margin-bottom:1rem}
+.detail-content li{margin-bottom:0.5rem}
+.options{margin-bottom:2rem}
+.option-group{margin-bottom:2rem}
+.option-label{font-weight:600;margin-bottom:0.8rem;text-transform:uppercase;font-size:0.9rem}
+.color-options{display:flex;gap:1rem;flex-wrap:wrap}
+.color-btn{width:50px;height:50px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:all 0.3s;position:relative}
+.color-btn.active{border-color:var(--primary);box-shadow:0 0 0 2px white,0 0 0 4px var(--primary)}
+.color-name{font-size:0.85rem;text-align:center;margin-top:0.5rem}
+.quantity-selector{display:flex;align-items:center;gap:1rem;border:1px solid var(--border);border-radius:6px;width:fit-content;padding:0.5rem}
+.qty-btn{background:none;border:none;cursor:pointer;font-size:1.2rem;padding:0.2rem 0.6rem;color:var(--primary)}
+.qty-input{border:none;text-align:center;width:60px;font-size:1rem;font-weight:600}
+.add-to-cart{width:100%;background:var(--primary);color:white;border:none;padding:1.2rem;font-size:1.1rem;font-weight:600;border-radius:6px;cursor:pointer;transition:background 0.3s;margin-bottom:1rem}
+.add-to-cart:hover{background:#b20d32}
+.buy-now{width:100%;background:white;color:var(--primary);border:2px solid var(--primary);padding:1.2rem;font-size:1.1rem;font-weight:600;border-radius:6px;cursor:pointer;transition:all 0.3s}
+.buy-now:hover{background:var(--primary);color:white}
+.info-badges{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;font-size:0.9rem}
+.badge{display:flex;align-items:center;gap:0.5rem}
+.badge-icon{font-size:1.2rem}
+.reviews-section{margin-top:4rem;padding-top:3rem;border-top:2px solid var(--border)}
+.reviews-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+.reviews-title{font-size:1.5rem;font-weight:600}
+.review-card{border:1px solid var(--border);padding:1.5rem;border-radius:6px;margin-bottom:1.5rem}
+.review-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem}
+.review-author{font-weight:600}
+.review-date{color:#999;font-size:0.9rem}
+.review-text{color:#666;margin-top:0.5rem}
+.related-section{margin-top:4rem;padding-top:3rem;border-top:2px solid var(--border)}
+.related-title{font-size:1.5rem;font-weight:600;margin-bottom:2rem}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2rem}
+.related-card{border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:all 0.3s}
+.related-card:hover{box-shadow:0 4px 12px rgba(0,0,0,0.1);transform:translateY(-4px)}
+.related-img{width:100%;aspect-ratio:1;background:#f5f5f5;overflow:hidden}
+.related-img img{width:100%;height:100%;object-fit:cover}
+.related-info{padding:1rem}
+.related-name{font-weight:600;margin-bottom:0.5rem}
+.related-price{color:var(--primary);font-weight:700;font-size:1.1rem}
+@media(max-width:768px){
+.product-grid{grid-template-columns:1fr;gap:2rem}
+.thumbnail{width:80px;height:80px}
+h1{font-size:1.5rem}
+.price{font-size:1.5rem}
+.related-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-container">
+<div class="logo" style="display:flex;align-items:center;gap:1rem">
+<button class="menu-toggle" onclick="toggleMenu()" style="background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;display:none">☰</button>
+<h2 style="color:white;margin:0">BDSM ÉLITE</h2>
+</div>
+<nav id="nav-menu" style="display:flex">
+<div style="width:100%;margin-bottom:1.5rem">
+<div style="display:flex;gap:0.5rem;background:#fff;border-radius:6px;padding:0.5rem;align-items:center">
+<input type="text" placeholder="Recherche" style="border:none;outline:none;flex:1;font-size:1rem;padding:0.3rem">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" style="cursor:pointer">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+</div>
+</div>
+<a href="index.html">Accueil</a>
+<a href="index.html#bondage">Bondage</a>
+<a href="index.html#jeuxsm">Jeux SM</a>
+<a href="index.html#lingerie">Lingerie</a>
+<a href="index.html#sextoys">Sextoys</a>
+</nav>
+<div class="icons" style="display:flex;gap:1.5rem;align-items:center">
+<div class="icon-wrapper" style="display:flex;align-items:center">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+<circle cx="12" cy="7" r="4"></circle>
+</svg>
+</div>
+<div class="icon-wrapper" id="panier-wrapper" style="display:flex;align-items:center;position:relative">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<circle cx="9" cy="21" r="1"></circle>
+<circle cx="20" cy="21" r="1"></circle>
+<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+</svg>
+<span class="badge-panier" id="badge-panier" style="position:absolute;top:-8px;right:-10px;background:#dc143c;color:white;border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:bold;border:2px solid #000">0</span>
+</div>
+</div>
+</div>
+</header>
+
+<div id="menu-overlay"></div>
+
+<style>
+@media(max-width:768px){
+  .menu-toggle{ display:block !important; }
+  
+  #nav-menu{ 
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:80%;
+    max-width:350px;
+    height:100vh;
+    background:#000;
+    flex-direction:column;
+    padding:1rem 1.5rem;
+    gap:0;
+    transition:left 0.3s ease;
+    z-index:1000;
+    overflow-y:auto;
+  }
+  
+  #nav-menu.active{ left:0; }
+  
+  #nav-menu a{
+    padding:1rem 0;
+    border-bottom:1px solid #333;
+    display:block;
+    color:white;
+    text-decoration:none;
+  }
+  
+  .menu-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    z-index:999;
+  }
+  
+  .menu-overlay.active{ display:block; }
+}
+</style>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('nav-menu');
+  const overlay = document.getElementById('menu-overlay');
+  
+  menu.classList.toggle('active');
+  overlay.classList.toggle('active');
+}
+
+// Attendre que le DOM soit chargé
+document.addEventListener('DOMContentLoaded', function() {
+  // Fermer le menu au clic sur un lien
+  document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.remove('active');
+      document.getElementById('menu-overlay').classList.remove('active');
+    });
+  });
+
+  // Fermer le menu au clic sur l'overlay
+  document.getElementById('menu-overlay').addEventListener('click', toggleMenu);
+});
+</script>
+
+<div class="breadcrumb">
+<a href="index.html">Accueil</a> / <span id="breadcrumb-cat">Meilleures Ventes</span> / <span id="product-name-breadcrumb">Produit</span>
+</div>
+
+<div class="product-container">
+<div class="product-grid">
+<!-- Galerie d'images -->
+<div class="product-gallery">
+<div class="main-image">
+<img id="main-image" src="https://via.placeholder.com/500x500?text=Produit" alt="Produit">
+</div>
+<div class="thumbnail-gallery">
+<div class="thumbnail active" onclick="changeImage(0)">
+<img src="https://via.placeholder.com/100?text=Vue+1" alt="Vue 1">
+</div>
+<div class="thumbnail" onclick="changeImage(1)">
+<img src="https://via.placeholder.com/100?text=Vue+2" alt="Vue 2">
+</div>
+<div class="thumbnail" onclick="changeImage(2)">
+<img src="https://via.placeholder.com/100?text=Vue+3" alt="Vue 3">
+</div>
+<div class="thumbnail" onclick="changeImage(3)">
+<img src="https://via.placeholder.com/100?text=Vue+4" alt="Vue 4">
+</div>
+</div>
+</div>
+
+<!-- Informations produit -->
+<div class="product-info">
+<h1 id="product-title">Produit</h1>
+
+<div class="product-meta">
+<div class="rating">
+<span class="stars">★★★★★</span>
+<span>(47 avis)</span>
+</div>
+<span>En stock - Expédition 24/48h</span>
+</div>
+
+<div class="price-section">
+<div>
+<span class="original-price" id="original-price" style="display:none;">€65,00</span>
+<span class="price" id="product-price">€49,90</span>
+<span class="discount" id="discount" style="display:none;">-23%</span>
+</div>
+</div>
+
+<p class="description" id="product-description">
+Description du produit
+</p>
+
+<div class="product-details">
+<div class="detail-title">Contenu du kit :</div>
+<div class="detail-content" id="product-contents">
+<ul>
+<li>Élément 1</li>
+<li>Élément 2</li>
+<li>Élément 3</li>
+</ul>
+</div>
+
+<div class="detail-title">Caractéristiques :</div>
+<div class="detail-content" id="product-specs">
+<ul>
+<li>Haute qualité</li>
+<li>Détails soignés</li>
+<li>Résistant</li>
+</ul>
+</div>
+</div>
+
+<!-- Options -->
+<div class="options">
+<div class="option-group">
+<div class="option-label">Couleur</div>
+<div class="color-options" id="color-options">
+<div style="text-align:center">
+<div class="color-btn active" style="background:#000" onclick="selectColor(this)"></div>
+<div class="color-name">Noir</div>
+</div>
+<div style="text-align:center">
+<div class="color-btn" style="background:#dc143c" onclick="selectColor(this)"></div>
+<div class="color-name">Rouge</div>
+</div>
+<div style="text-align:center">
+<div class="color-btn" style="background:#ffc0cb" onclick="selectColor(this)"></div>
+<div class="color-name">Rose</div>
+</div>
+<div style="text-align:center">
+<div class="color-btn" style="background:#800080" onclick="selectColor(this)"></div>
+<div class="color-name">Violet</div>
+</div>
+</div>
+</div>
+
+<div class="option-group">
+<div class="option-label">Quantité</div>
+<div class="quantity-selector">
+<button class="qty-btn" onclick="decreaseQty()">−</button>
+<input type="number" class="qty-input" id="quantity" value="1" min="1">
+<button class="qty-btn" onclick="increaseQty()">+</button>
+</div>
+</div>
+</div>
+
+<!-- Boutons d'action -->
+<button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+<button class="buy-now" onclick="buyNow()">Acheter maintenant</button>
+
+<!-- Badges informatifs -->
+<div class="info-badges">
+<div class="badge">
+<span class="badge-icon">🔒</span>
+<span>Paiement Sécurisé</span>
+</div>
+<div class="badge">
+<span class="badge-icon">📦</span>
+<span>Livraison Gratuite</span>
+</div>
+<div class="badge">
+<span class="badge-icon">📫</span>
+<span>Colis Discret</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Section Avis -->
+<div class="reviews-section">
+<div class="reviews-header">
+<h2 class="reviews-title">Avis Clients</h2>
+<button onclick="toggleReviewForm()" style="background:var(--primary);color:white;border:none;padding:0.6rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:600">Laisser un avis</button>
+</div>
+
+<!-- Formulaire d'avis -->
+<div id="review-form" style="display:none;margin-bottom:2rem;border:2px solid var(--primary);padding:2rem;border-radius:8px;background:#f9f9f9">
+<h3 style="margin-bottom:1.5rem;font-size:1.2rem">Partagez votre avis</h3>
+
+<div style="margin-bottom:1.5rem">
+<label style="display:block;font-weight:600;margin-bottom:0.8rem">Votre nom *</label>
+<input type="text" id="review-name" placeholder="Entrez votre nom" style="width:100%;padding:0.8rem;border:1px solid var(--border);border-radius:6px;font-size:1rem">
+</div>
+
+<div style="margin-bottom:1.5rem">
+<label style="display:block;font-weight:600;margin-bottom:0.8rem">Note *</label>
+<div style="display:flex;gap:0.5rem;font-size:2rem">
+<span style="cursor:pointer" onclick="setRating(1)">☆</span>
+<span style="cursor:pointer" onclick="setRating(2)">☆</span>
+<span style="cursor:pointer" onclick="setRating(3)">☆</span>
+<span style="cursor:pointer" onclick="setRating(4)">☆</span>
+<span style="cursor:pointer" onclick="setRating(5)">☆</span>
+</div>
+<span id="rating-display" style="display:block;margin-top:0.5rem;color:#666">Sélectionnez une note</span>
+</div>
+
+<div style="margin-bottom:1.5rem">
+<label style="display:block;font-weight:600;margin-bottom:0.8rem">Votre avis *</label>
+<textarea id="review-text" placeholder="Partagez votre expérience..." style="width:100%;padding:0.8rem;border:1px solid var(--border);border-radius:6px;font-size:1rem;font-family:inherit;min-height:120px;resize:vertical"></textarea>
+</div>
+
+<div style="display:flex;gap:1rem">
+<button onclick="submitReview()" style="background:var(--primary);color:white;border:none;padding:0.8rem 2rem;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem">Soumettre l'avis</button>
+<button onclick="toggleReviewForm()" style="background:white;color:#666;border:1px solid var(--border);padding:0.8rem 2rem;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem">Annuler</button>
+</div>
+</div>
+
+<div id="reviews-list">
+<div class="review-card">
+<div class="review-header">
+<div>
+<div class="review-author">Marie D.</div>
+<div class="review-date">Il y a 2 semaines</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+<div class="review-text">Produit de très bonne qualité, conforme à la description. Livraison rapide et emballage discret. Je recommande !</div>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<div>
+<div class="review-author">Thomas L.</div>
+<div class="review-date">Il y a 1 mois</div>
+</div>
+<div class="stars">★★★★☆</div>
+</div>
+<div class="review-text">Bon rapport qualité-prix. Les matériaux sont solides. Un peu juste sur les dimensions mais acceptable.</div>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<div>
+<div class="review-author">Sophie B.</div>
+<div class="review-date">Il y a 1 mois</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+<div class="review-text">Parfait ! Exactement ce que j'attendais. Le service client est aussi très réactif.</div>
+</div>
+
+<div class="review-card">
+<div class="review-header">
+<div>
+<div class="review-author">Jean M.</div>
+<div class="review-date">Il y a 2 mois</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+<div class="review-text">Excellent kit, complet et de qualité. Je l'ai acheté en cadeau et ça a eu beaucoup de succès !</div>
+</div>
+</div>
+</div>
+
+<!-- Produits connexes -->
+<div class="related-section">
+<h2 class="related-title">Vous aimerez aussi</h2>
+<div class="related-grid" id="related-products">
+<div class="related-card">
+<div class="related-img">
+<img src="https://via.placeholder.com/250?text=Produit+1" alt="Produit 1">
+</div>
+<div class="related-info">
+<div class="related-name">Menottes Cuir Luxe</div>
+<div class="related-price">44,95 €</div>
+</div>
+</div>
+
+<div class="related-card">
+<div class="related-img">
+<img src="https://via.placeholder.com/250?text=Produit+2" alt="Produit 2">
+</div>
+<div class="related-info">
+<div class="related-name">Harnais Bondage</div>
+<div class="related-price">49,95 €</div>
+</div>
+</div>
+
+<div class="related-card">
+<div class="related-img">
+<img src="https://via.placeholder.com/250?text=Produit+3" alt="Produit 3">
+</div>
+<div class="related-info">
+<div class="related-name">Fouet Premium</div>
+<div class="related-price">79,95 €</div>
+</div>
+</div>
+
+<div class="related-card">
+<div class="related-img">
+<img src="https://via.placeholder.com/250?text=Produit+4" alt="Produit 4">
+</div>
+<div class="related-info">
+<div class="related-name">Collier BDSM</div>
+<div class="related-price">34,95 €</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+// Récupérer les données du produit depuis les paramètres d'URL
+const params = new URLSearchParams(window.location.search);
+const productName = params.get('product') || 'Produit';
+const productPrice = params.get('price') || '49,90';
+const productDesc = params.get('desc') || 'Description du produit';
+
+// Mettre à jour les informations du produit
+document.getElementById('product-title').textContent = productName;
+document.getElementById('product-name-breadcrumb').textContent = productName;
+document.getElementById('product-price').textContent = '€' + productPrice;
+document.getElementById('product-description').textContent = productDesc;
+
+// Gestion de la galerie
+function changeImage(index) {
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  thumbnails.forEach((t, i) => {
+    t.classList.remove('active');
+    if (i === index) t.classList.add('active');
+  });
+  document.getElementById('main-image').src = `https://via.placeholder.com/500x500?text=Vue+${index + 1}`;
+}
+
+// Gestion des couleurs
+function selectColor(element) {
+  document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('active'));
+  element.classList.add('active');
+}
+
+// Gestion de la quantité
+function increaseQty() {
+  const input = document.getElementById('quantity');
+  input.value = parseInt(input.value) + 1;
+}
+
+function decreaseQty() {
+  const input = document.getElementById('quantity');
+  if (input.value > 1) input.value = parseInt(input.value) - 1;
+}
+
+// Ajouter au panier
+function addToCart() {
+  const qty = document.getElementById('quantity').value;
+  let cartCount = parseInt(localStorage.getItem('panier-count')) || 0;
+  cartCount += parseInt(qty);
+  localStorage.setItem('panier-count', cartCount);
+  
+  alert(`${productName} ajouté au panier! (Total: ${cartCount} article${cartCount > 1 ? 's' : ''})`);
+  
+  // Retourner à l'accueil
+  setTimeout(() => window.location.href = 'index.html', 500);
+}
+
+// Acheter maintenant
+function buyNow() {
+  addToCart();
+}
+
+// Gestion des avis
+let currentRating = 0;
+
+function toggleReviewForm() {
+  const form = document.getElementById('review-form');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  if (form.style.display === 'block') {
+    form.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function setRating(stars) {
+  currentRating = stars;
+  const display = document.getElementById('rating-display');
+  display.textContent = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+  display.style.color = 'var(--primary)';
+}
+
+function submitReview() {
+  const name = document.getElementById('review-name').value.trim();
+  const text = document.getElementById('review-text').value.trim();
+  
+  if (!name || !currentRating || !text) {
+    alert('Veuillez remplir tous les champs et sélectionner une note');
+    return;
+  }
+  
+  // Créer l'avis
+  const review = {
+    name: name,
+    rating: currentRating,
+    text: text,
+    date: new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }),
+    productId: productName.toLowerCase().replace(/\s+/g, '-')
+  };
+  
+  // Récupérer les avis existants
+  let reviews = JSON.parse(localStorage.getItem('reviews-' + productName) || '[]');
+  reviews.unshift(review);
+  
+  // Sauvegarder
+  localStorage.setItem('reviews-' + productName, JSON.stringify(reviews));
+  
+  // Réinitialiser le formulaire
+  document.getElementById('review-name').value = '';
+  document.getElementById('review-text').value = '';
+  currentRating = 0;
+  document.getElementById('rating-display').textContent = 'Sélectionnez une note';
+  document.getElementById('rating-display').style.color = '#666';
+  
+  alert('Merci pour votre avis ! ❤️');
+  
+  // Recharger les avis
+  loadReviews();
+  toggleReviewForm();
+}
+
+function loadReviews() {
+  let reviews = JSON.parse(localStorage.getItem('reviews-' + productName) || '[]');
+  const reviewsList = document.getElementById('reviews-list');
+  
+  // Avis par défaut
+  const defaultReviews = [
+    { name: 'Marie D.', rating: 5, text: 'Produit de très bonne qualité, conforme à la description. Livraison rapide et emballage discret. Je recommande !', date: 'Il y a 2 semaines' },
+    { name: 'Thomas L.', rating: 4, text: 'Bon rapport qualité-prix. Les matériaux sont solides. Un peu juste sur les dimensions mais acceptable.', date: 'Il y a 1 mois' },
+    { name: 'Sophie B.', rating: 5, text: 'Parfait ! Exactement ce que j\'attendais. Le service client est aussi très réactif.', date: 'Il y a 1 mois' },
+    { name: 'Jean M.', rating: 5, text: 'Excellent kit, complet et de qualité. Je l\'ai acheté en cadeau et ça a eu beaucoup de succès !', date: 'Il y a 2 mois' }
+  ];
+  
+  // Fusionner avec les nouveaux avis
+  const allReviews = [...reviews, ...defaultReviews];
+  
+  reviewsList.innerHTML = allReviews.map(review => `
+    <div class="review-card">
+      <div class="review-header">
+        <div>
+          <div class="review-author">${review.name}</div>
+          <div class="review-date">${review.date}</div>
+        </div>
+        <div class="stars">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</div>
+      </div>
+      <div class="review-text">${review.text}</div>
+    </div>
+  `).join('');
+}
+
+window.addEventListener('load', function(){
+  loadReviews();
+  // Charger le nombre du panier
+  let count = parseInt(localStorage.getItem('panier-count')) || 0;
+  document.getElementById('badge-panier').textContent = count;
+});
+</script>
+</body>
+</html>
