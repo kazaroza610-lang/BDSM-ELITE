@@ -69,6 +69,9 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 .dropdown-menu a:hover{background:var(--primary)}
 .dropdown:hover .dropdown-menu{display:block}
 
+
+#homepage-sections{display:block}
+.page-section:not(#page-index) ~ #homepage-sections{display:none}
 </style>
 </head>
 <body>
@@ -145,7 +148,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
     </div>
     </div>
 
-    <div class="container">
+    <div id="homepage-sections" class="container">
         <h2 class="section-title">Meilleures Ventes</h2>
         <div class="products">
             <div class="product-card">
@@ -156,6 +159,36 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                     <button class="btn-ajouter">Ajouter au panier</button>
                 </div>
             </div>
+            <div class="product-card">
+                <div class="product-img">Image Produit</div>
+                <div class="product-info">
+                    <div class="product-name">Produit Best-seller 2</div>
+                    <div class="product-price">€39.99</div>
+                    <button class="btn-ajouter">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Nouveautés</h2>
+        <div class="products">
+            <div class="product-card">
+                <div class="product-img">Image Produit</div>
+                <div class="product-info">
+                    <div class="product-name">Nouveau Produit 1</div>
+                    <div class="product-price">€29.99</div>
+                    <button class="btn-ajouter">Ajouter au panier</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">Image Produit</div>
+                <div class="product-info">
+                    <div class="product-name">Nouveau Produit 2</div>
+                    <div class="product-price">€34.99</div>
+                    <button class="btn-ajouter">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
             <div class="product-card">
                 <div class="product-img">Image Produit</div>
                 <div class="product-info">
@@ -601,6 +634,10 @@ function showPage(pageId) {
         section.classList.remove('active');
     });
     
+    // Masquer les sections de la homepage
+    const homepageSections = document.getElementById('homepage-sections');
+    if (homepageSections) homepageSections.style.display = 'none';
+    
     // Afficher UNIQUEMENT la page demandée
     if (pageId === 'index') {
         const indexPage = document.getElementById('page-index');
@@ -608,6 +645,8 @@ function showPage(pageId) {
             indexPage.style.display = 'block';
             indexPage.classList.add('active');
         }
+        // Afficher aussi les sections de la homepage
+        if (homepageSections) homepageSections.style.display = 'block';
     } else {
         const page = document.getElementById('page-' + pageId);
         if (page) {
