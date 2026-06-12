@@ -17,32 +17,37 @@
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.5; }
         
         /* HEADER */
-        header { background: var(--light); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+        header { background: var(--light); border-bottom: 1px solid var(--border); padding: 0.8rem 2rem; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--text); text-transform: uppercase; letter-spacing: 2px; }
-        .logo span { color: var(--primary); }
+        .logo { display: flex; align-items: center; height: 70px; }
+        .logo img { max-height: 70px; width: auto; }
         nav { display: flex; gap: 2.5rem; }
         nav a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; transition: color 0.3s; }
         nav a:hover { color: var(--primary); }
-        .icons { display: flex; gap: 1.5rem; font-size: 1.2rem; cursor: pointer; }
+        .icons { display: flex; gap: 1.5rem; font-size: 1.2rem; cursor: pointer; transition: opacity 0.3s; }
+        .icons span:hover { opacity: 0.7; }
         
         /* SLIDESHOW */
-        .slideshow { position: relative; width: 100%; height: 500px; overflow: hidden; background: #f0f0f0; }
+        .slideshow { position: relative; width: 100%; height: 550px; overflow: hidden; background: #000; }
         .slides-container { position: relative; width: 100%; height: 100%; }
         .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; }
         .slide.active { opacity: 1; }
         .slide img { width: 100%; height: 100%; object-fit: cover; }
         .slide-counter { position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.7); color: white; padding: 8px 14px; font-size: 0.9rem; border-radius: 4px; z-index: 10; }
+        .slide-nav { position: absolute; bottom: 20px; left: 20px; display: flex; gap: 8px; z-index: 10; }
+        .slide-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; border: none; padding: 0; }
+        .slide-dot:hover { background: rgba(255,255,255,0.8); }
+        .slide-dot.active { background: var(--primary); width: 32px; border-radius: 6px; }
         
         /* CONTAINER */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         
         /* SECTION TITLE */
-        .section-title { font-size: 2rem; margin: 3rem 0 2rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .section-title { font-size: 2rem; margin: 3rem 0 2rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; color: var(--text); }
         
         /* PRODUCTS GRID */
         .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .product-card { border: 1px solid var(--border); padding: 0; border-radius: 4px; transition: all 0.3s; }
+        .product-card { border: 1px solid var(--border); padding: 0; border-radius: 4px; transition: all 0.3s; cursor: pointer; }
         .product-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-4px); }
         .product-img { width: 100%; height: 280px; background: var(--gray); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; border-bottom: 1px solid var(--border); }
         .product-info { padding: 1rem; }
@@ -52,14 +57,14 @@
         
         /* ABOUT SECTION */
         .about { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding: 3rem 0; margin: 3rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .about-text h2 { font-size: 1.8rem; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .about-text h2 { font-size: 1.8rem; margin-bottom: 1.5rem; text-transform: uppercase; color: var(--text); }
         .about-text p { margin-bottom: 1rem; color: #666; line-height: 1.7; }
         .about-img { width: 100%; height: 400px; background: var(--gray); border-radius: 4px; overflow: hidden; }
         .about-img img { width: 100%; height: 100%; object-fit: cover; }
         
         /* NEWSLETTER */
         .newsletter { background: var(--gray); padding: 3rem 2rem; text-align: center; margin: 3rem 0; border-radius: 4px; }
-        .newsletter h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+        .newsletter h3 { font-size: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase; color: var(--text); }
         .newsletter p { color: #666; margin-bottom: 1.5rem; }
         .newsletter-form { display: flex; max-width: 400px; margin: 0 auto; gap: 0.5rem; }
         .newsletter-form input { flex: 1; padding: 0.8rem; border: 1px solid var(--border); border-radius: 4px; font-size: 0.9rem; }
@@ -69,12 +74,12 @@
         /* FOOTER */
         footer { background: var(--light); border-top: 1px solid var(--border); padding: 3rem 2rem; margin-top: 4rem; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h3 { font-size: 0.95rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        .footer-section h3 { font-size: 0.95rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
         .footer-section ul { list-style: none; }
         .footer-section a { color: #666; text-decoration: none; display: block; margin-bottom: 0.6rem; font-size: 0.9rem; transition: color 0.3s; }
         .footer-section a:hover { color: var(--primary); }
         .payment-methods { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); }
-        .payment-methods h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+        .payment-methods h4 { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; color: var(--text); }
         .payment-icons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .payment-icon { width: 50px; height: 35px; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; border-radius: 3px; }
         .footer-bottom { text-align: center; padding-top: 2rem; margin-top: 2rem; border-top: 1px solid var(--border); color: #999; font-size: 0.9rem; }
@@ -86,6 +91,7 @@
             .footer-container { grid-template-columns: 1fr; }
             .products { grid-template-columns: repeat(2, 1fr); }
             .newsletter-form { flex-direction: column; }
+            .logo img { max-height: 50px; }
         }
     </style>
 </head>
@@ -93,7 +99,9 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <div class="logo">BDSM <span>ÉLITE</span></div>
+            <div class="logo">
+                <img src="https://i.imgur.com/4TDTeDK.png" alt="BDSM ÉLITE Logo">
+            </div>
             <nav>
                 <a href="#accueil">ACCUEIL</a>
                 <a href="#bondage">BONDAGE</a>
@@ -101,23 +109,31 @@
                 <a href="#lingerie">LINGERIE</a>
                 <a href="#sextoys">SEXTOYS</a>
             </nav>
-            <div class="icons">🔍 👤 🛍️</div>
+            <div class="icons">
+                <span title="Rechercher">🔍</span>
+                <span title="Mon compte">👤</span>
+                <span title="Panier">🛍️</span>
+            </div>
         </div>
     </header>
-
+ 
     <!-- SLIDESHOW -->
     <div class="slideshow">
         <div class="slides-container">
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1595618423907-b0941a2f3e73?w=1400&h=600&fit=crop" alt="Bannière 1">
+                <img src="https://i.imgur.com/6MEa81f.jpeg" alt="Bannière BDSM 1">
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=1400&h=600&fit=crop" alt="Bannière 2">
+                <img src="https://i.imgur.com/RgdIDl2.png" alt="Bannière BDSM 2">
             </div>
+        </div>
+        <div class="slide-nav">
+            <button class="slide-dot active" onclick="goToSlide(0)" aria-label="Aller à la bannière 1"></button>
+            <button class="slide-dot" onclick="goToSlide(1)" aria-label="Aller à la bannière 2"></button>
         </div>
         <div class="slide-counter"><span id="current">1</span> / <span id="total">2</span></div>
     </div>
-
+ 
     <!-- BEST SELLERS -->
     <div class="container">
         <h2 class="section-title">Meilleures Ventes</h2>
@@ -130,7 +146,7 @@
             <div class="product-card"><div class="product-img">💋</div><div class="product-info"><div class="product-name">Lingerie Sexy</div><div class="product-price">39,95 €</div></div></div>
         </div>
     </div>
-
+ 
     <!-- ABOUT -->
     <div class="container">
         <div class="about">
@@ -140,10 +156,10 @@
                 <p>Nous sommes passionnés par l'univers BDSM et nous nous engageons à vous offrir les meilleurs produits pour explorer vos désirs.</p>
                 <p>Que vous soyez dominant(e), soumis(e), switch ou simplement curieux(se), vous trouverez tout ce qu'il vous faut pour vivre pleinement vos fantasmes.</p>
             </div>
-            <div class="about-img"><img src="https://images.unsplash.com/photo-1595618423907-b0941a2f3e73?w=600&h=400&fit=crop" alt="BDSM ÉLITE"></div>
+            <div class="about-img"><img src="https://i.imgur.com/RgdIDl2.png" alt="BDSM ÉLITE"></div>
         </div>
     </div>
-
+ 
     <!-- LINGERIE -->
     <div class="container">
         <h2 class="section-title" id="lingerie">Lingerie Premium</h2>
@@ -154,7 +170,7 @@
             <div class="product-card"><div class="product-img">✨</div><div class="product-info"><div class="product-name">Masque SM</div><div class="product-price">29,95 €</div></div></div>
         </div>
     </div>
-
+ 
     <!-- JEUX SM -->
     <div class="container">
         <h2 class="section-title" id="jeuxsm">Jeux SM</h2>
@@ -165,7 +181,7 @@
             <div class="product-card"><div class="product-img">🔒</div><div class="product-info"><div class="product-name">Cage de Chasteté</div><div class="product-price">69,95 €</div></div></div>
         </div>
     </div>
-
+ 
     <!-- SEXTOYS -->
     <div class="container">
         <h2 class="section-title" id="sextoys">Sextoys</h2>
@@ -176,7 +192,7 @@
             <div class="product-card"><div class="product-img">🎁</div><div class="product-info"><div class="product-name">Kit Deluxe</div><div class="product-price">99,95 €</div></div></div>
         </div>
     </div>
-
+ 
     <!-- NEWSLETTER -->
     <div class="container">
         <div class="newsletter">
@@ -188,7 +204,7 @@
             </form>
         </div>
     </div>
-
+ 
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
@@ -233,18 +249,27 @@
             <p>&copy; 2026 BDSM ÉLITE. Tous droits réservés.</p>
         </div>
     </footer>
-
+ 
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slide-dot');
         const totalSlides = slides.length;
         
         function updateSlide() {
             slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
             slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
             document.getElementById('current').textContent = currentSlide + 1;
         }
         
+        function goToSlide(n) {
+            currentSlide = n;
+            updateSlide();
+        }
+        
+        // Auto-rotation toutes les 5 secondes
         setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             updateSlide();
@@ -254,3 +279,4 @@
     </script>
 </body>
 </html>
+ 
