@@ -4581,7 +4581,16 @@ function showPage(pageId) {
 }
 
 function ajouterAuPanier(productName) {
-    alert(`✓ "${productName}" a été ajouté au panier!`);
+    const badge = document.getElementById('badge-panier');
+    const currentCount = parseInt(badge.textContent) || 0;
+    const newCount = currentCount + 1;
+    badge.textContent = newCount;
+
+    // Animation du badge
+    badge.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+        badge.style.transform = 'scale(1)';
+    }, 200);
 }
 
 // Au chargement initial, afficher la page d'accueil
