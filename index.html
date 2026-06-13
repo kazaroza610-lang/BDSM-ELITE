@@ -54,6 +54,20 @@ nav a:hover{color:var(--primary)}
 .newsletter-form input{flex:1;padding:0.8rem;border:1px solid var(--border);border-radius:4px;font-size:0.9rem}
 .newsletter-form button{background:var(--primary);color:white;border:none;padding:0.8rem 1.5rem;cursor:pointer;font-weight:600;border-radius:4px;transition:all 0.3s}
 .newsletter-form button:hover{background:#b20d32;transform:translateY(-1px)}
+/* Repositionner descriptions sous images pour fiches produits */
+div[style*="grid-template-columns:1fr 380px"] > div:nth-child(1) {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+}
+div[style*="grid-template-columns:1fr 380px"] > div:nth-child(1) > div:nth-child(2) {
+    order: 2;
+    margin-top: 1.5rem;
+}
+div[style*="grid-template-columns:1fr 380px"] > div:nth-child(1) > div:nth-child(1) {
+    order: 1;
+    margin-bottom: 1.5rem;
+}
 .newsletter-form button:active{transform:translateY(0)}
 footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2rem;margin-top:1rem;display:flex;flex-direction:column}
 .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
@@ -159,15 +173,17 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
 
         <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
-            <div style="text-align:center;">
-                <img id="main-image-baillon-bdsm" src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" alt="BÂILLON BDSMOS" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
+            <div>
+                <div style="text-align:center;">
+                    <img id="main-image-baillon-bdsm" src="https://bdsm-empire.fr/cdn/shop/products/bdsm-baillon__1.jpg?v=1591125988" alt="BÂILLON BDSMOS" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
+                <div style="font-size:0.95rem;line-height:1.6;color:#555;margin-bottom:1.5rem;border-top:1px solid #eee;padding-top:1rem;">Bâillon classique boule blanche pour une retenue efficace et discrète. Accessoire incontournable du BDSM.</div>
             </div>
 
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON BDSMOS</h1>
 
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€19.95</div>
-                <div style="font-size:0.95rem;line-height:1.6;color:#555;margin-bottom:1.5rem;border-top:1px solid #eee;padding-top:1rem;">Bâillon classique boule blanche pour une retenue efficace et discrète. Accessoire incontournable du BDSM.</div>
 
                 <button style="width:100%;padding:1.1rem;font-size:1rem;margin-bottom:1.8rem;background:#dc143c;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:bold;text-transform:uppercase;letter-spacing:1px;" onclick="ajouterAuPanier('BÂILLON BDSMOS')">Ajouter au panier</button>
 
@@ -243,8 +259,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 
             <!-- CENTRE: Grande image CARRÉE -->
             <div style="text-align:center;">
-                <img id="main-image-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Bâillon Bouche" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1294728802.jpg?v=1591125999" alt="Bâillon Bouche" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
 
             <!-- DROITE: Infos -->
             <div>
@@ -347,8 +363,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
             </div>
 
             <div style="text-align:center;">
-                <img id="main-image-baillon-harnais" src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" alt="BÂILLON HARNAIS" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-harnais" src="https://bdsm-empire.fr/cdn/shop/products/baillon-harnais__17.jpg?v=1624186603" alt="BÂILLON HARNAIS" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
 
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON HARNAIS</h1>
@@ -442,8 +458,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
             </div>
 
             <div style="text-align:center;">
-                <img id="main-image-harnais-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/harnais-baillon___18.jpg?v=1624186599" alt="BÂILLON HARNAIS BOUCHE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-harnais-baillon-bouche" src="https://bdsm-empire.fr/cdn/shop/products/harnais-baillon___18.jpg?v=1624186599" alt="BÂILLON HARNAIS BOUCHE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
 
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON HARNAIS BOUCHE</h1>
@@ -537,8 +553,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
             </div>
 
             <div style="text-align:center;">
-                <img id="main-image-baillon-similicuir" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431315.jpg?v=1594480632" alt="BÂILLON SIMILICUIR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-similicuir" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1470431315.jpg?v=1594480632" alt="BÂILLON SIMILICUIR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
 
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON SIMILICUIR</h1>
@@ -629,8 +645,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <img id="variant-baillon-masque-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280464.jpg?v=1624186617" alt="Rouge" onclick="selectVariantImage('baillon-masque', 'product-image-1534280464.jpg?v=1624186617', 'variant-baillon-masque-rouge', 'btn-baillon-masque-rouge')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
             </div>
             <div style="text-align:center;">
-                <img id="main-image-baillon-masque" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="BÂILLON MASQUE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-masque" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1534280473.jpg?v=1600964809" alt="BÂILLON MASQUE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON MASQUE</h1>
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€34.95</div>
@@ -712,8 +728,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <img id="variant-baillon-coeur-violet" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/product-image-1326629125_1200x1200.jpg?v=1591126016" alt="Violet" onclick="selectVariantImage('baillon-coeur', 'product-image-1326629125.jpg?v=1591126016', 'variant-baillon-coeur-violet', 'btn-baillon-coeur-violet')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
             </div>
             <div style="text-align:center;">
-                <img id="main-image-baillon-coeur" src="https://bdsm-empire.fr/cdn/shop/products/baillon-c_C5_93ur__7_1200x1200.jpg?v=1624186635" alt="BÂILLON COEUR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-coeur" src="https://bdsm-empire.fr/cdn/shop/products/baillon-c_C5_93ur__7_1200x1200.jpg?v=1624186635" alt="BÂILLON COEUR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON COEUR</h1>
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€21.95</div>
@@ -791,8 +807,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
         <a href="#bondage-baillon" onclick="showPage('bondage-baillon'); return false;" style="color:#666;text-decoration:none;margin-bottom:1rem;display:block;font-size:0.9rem;">← Retour à Bâillons</a>
         <div style="display:grid;grid-template-columns:1fr 380px;gap:2.5rem;margin:2rem 0;">
             <div style="text-align:center;">
-                <img id="main-image-baillon-cuir" src="https://bdsm-empire.fr/cdn/shop/products/HTB1Scl.QFXXXXa0XVXXq6xXFXXXh.jpg" alt="BÂILLON CUIR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-cuir" src="https://bdsm-empire.fr/cdn/shop/products/HTB1Scl.QFXXXXa0XVXXq6xXFXXXh.jpg" alt="BÂILLON CUIR" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON CUIR</h1>
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€39.95</div>
@@ -870,8 +886,8 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
                 <img id="variant-baillon-soumise-rouge" class="variant-unselected" src="https://bdsm-empire.fr/cdn/shop/products/14_200572151_Tang.jpg?v=1591126024" alt="Rouge" onclick="selectVariantImage('baillon-soumise', '14_200572151_Tang.jpg?v=1591126024', 'variant-baillon-soumise-rouge', 'btn-baillon-soumise-rouge')" style="cursor:pointer;border-radius:4px;width:100%;aspect-ratio:1/1;object-fit:cover;border:3px solid #ddd;">
             </div>
             <div style="text-align:center;">
-                <img id="main-image-baillon-soumise" src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="BÂILLON SOUMISE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;">
-            </div>
+                <img id="main-image-baillon-soumise" src="https://bdsm-empire.fr/cdn/shop/products/14_200572148_Black.jpg?v=1591126024" alt="BÂILLON SOUMISE" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-bottom:1.5rem;">
+                </div>
             <div>
                 <h1 style="font-size:2.2rem;margin-bottom:1.5rem;font-weight:bold;letter-spacing:1px;">BÂILLON SOUMISE</h1>
                 <div style="font-size:2.4rem;color:#dc143c;font-weight:bold;margin-bottom:2rem;">€24.95</div>
