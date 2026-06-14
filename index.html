@@ -71,7 +71,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 @media(max-width:768px){nav{gap:1rem;font-size:0.75rem}.slideshow{height:300px}.footer-container{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.newsletter-form{flex-direction:column}.logo img{max-height:50px}.icons{gap:1rem}.badge-panier{width:20px;height:20px;font-size:0.65rem}}
 
 .page-section{display:none}
-.page-section.active{display:block};.page-section{padding:0 2rem}.page-section > h2,.page-section > div:not(.products){margin-left:auto;margin-right:auto;max-width:950px}
+.page-section{display:none}.page-section.active{display:block}.page-section > h2{text-align:center;margin-bottom:2rem}
 .dropdown{position:relative;display:inline-block}
 .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:white;border:1px solid var(--border);border-radius:4px;flex-direction:column;gap:0.5rem;padding:0.5rem;z-index:1000;width:100%;min-width:200px}
 .dropdown-menu a{display:block;color:#333;padding:0.8rem 1rem;text-decoration:none;font-size:0.8rem;transition:background 0.3s}
@@ -3623,6 +3623,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 
 <!-- LINGERIE PAGES -->
 <div id="page-lingerie-tout" class="page-section">
+    <h2 class="section-title">Tous les produits - Lingerie</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / Lingerie</div>
     <div class="products">
         <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-ensemble-bdsm-bijou'); return false;">
@@ -3709,6 +3710,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
 </div>
 
 <div id="page-lingerie-bdsm" class="page-section">
+    <h2 class="section-title">Tous les produits - Lingerie BDSM</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / Lingerie / Lingerie BDSM</div>
     <div class="products">
         <div class="product-card" style="cursor:pointer;" onclick="showPage('fiche-ensemble-bdsm-bijou'); return false;">
@@ -3851,6 +3853,7 @@ footer{background:var(--light);border-top:1px solid var(--border);padding:1rem 2
     </div>
 </div>
 <div id="page-bondage-tout" class="page-section">
+    <h2 class="section-title">Tous les produits - Bondage</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / Bondage</div>
     <div class="products">
         <div class="product-card" style="cursor:pointer;" onclick="showPage('baillon-bdsm'); return false;">
@@ -8886,6 +8889,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 <!-- LINGERIE BDSM PRODUCT PAGES -->
 
 <div id="fiche-ensemble-bdsm-bijou" class="page-section">
+    <h2 class="section-title">Ensemble BDSM Bijou</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('page-lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble BDSM Bijou</div>
     <div class="container" style="margin-top:2rem;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
@@ -8966,6 +8970,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-harnais-et-menottes-en-satin" class="page-section">
+    <h2 class="section-title">Ensemble harnais et menottes en satin</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble harnais et menottes en satin</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;">
@@ -9045,6 +9050,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-harnais-2-pieces-ambre" class="page-section">
+    <h2 class="section-title">Harnais 2 pièces Ambre</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Harnais 2 pièces Ambre</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;">
@@ -9089,6 +9095,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-harnais-perles" class="page-section">
+    <h2 class="section-title">Harnais Perles</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Harnais Perles</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;">
@@ -9133,6 +9140,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-3-pieces-harnais-ohyeah" class="page-section">
+    <h2 class="section-title">Ensemble 3 pièces harnais OhYeah</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble 3 pièces harnais OhYeah</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;">
@@ -9177,6 +9185,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-ouvert-donarella-obsessive" class="page-section">
+    <h2 class="section-title">Ensemble ouvert Donarella</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble ouvert Donarella</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;"><img src="https://www.passagedudesir.com/cdn/shop/files/Ensemble-ouvert-3-pieces-Donarella---Obsessive---1.jpg?v=1759762489&width=1946" alt="Ensemble ouvert Donarella" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;"></div>
@@ -9208,6 +9217,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-ouvert-pearlove" class="page-section">
+    <h2 class="section-title">Ensemble Pearlove</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble Pearlove</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;"><img src="https://www.passagedudesir.com/cdn/shop/files/ensemble-ouvert-pearlove.jpg?v=1723051322&width=1946" alt="Ensemble Pearlove" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;"></div>
@@ -9231,6 +9241,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-ouvert-miamor-obsessive" class="page-section">
+    <h2 class="section-title">Ensemble Miamor</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble Miamor</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;"><img src="https://www.passagedudesir.com/cdn/shop/files/ensemble-ouvert-miamor_f51c217d-43ae-4507-a744-8985d0ab20fa.jpg?v=1723050399&width=1946" alt="Ensemble Miamor" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;"></div>
@@ -9254,6 +9265,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-ouvert-3-pieces-axelle" class="page-section">
+    <h2 class="section-title">Ensemble Axelle</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble Axelle</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;"><img src="https://www.passagedudesir.com/cdn/shop/files/Ensemble-3-pieces---Christine-Le-Duc---5.jpg?v=1756799446&width=1946" alt="Ensemble Axelle" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;"></div>
@@ -9277,6 +9289,7 @@ function selectVariantImage(productId, imageUrl, variantId, buttonId) {
 </div>
 
 <div id="fiche-ensemble-ouvert-letica-obsessive" class="page-section">
+    <h2 class="section-title">Ensemble Letica</h2>
     <div style="margin-bottom:1rem;padding-left:2rem;font-size:0.9rem;color:#666;"><a href="#" onclick="showPage('index'); return false;" style="color:#666;text-decoration:none;">ACCUEIL</a> / <a href="#lingerie-bdsm" onclick="showPage('lingerie-bdsm'); return false;" style="color:#666;text-decoration:none;">Lingerie BDSM</a> / Ensemble Letica</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin:2rem auto;max-width:900px;">
             <div style="text-align:center;"><img src="https://www.passagedudesir.com/cdn/shop/files/fre_pm_Ensemble-ouvert-2-pcs-10405_7.jpg?v=1757664893&width=1946" alt="Ensemble Letica" style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;"></div>
